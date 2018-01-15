@@ -2,6 +2,6 @@
 PHP project check application
 
 #Laravel <br>
-php artisan key:generate
-php artisan migrate:refresh
-php artisan db:seed
+php artisan key:generate<br>
+php artisan migrate:refresh<br>
+php artisan db:seed<br>
