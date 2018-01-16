@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/check/{link}','CheckController@start');
+Route::get('/check/{link}','ApiEntryController@store');

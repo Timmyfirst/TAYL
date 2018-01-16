@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CheckController extends Controller
+class ApiEntryController extends Controller
 {
 
-  public function start($link)
+  public function store($link)
   {
-    if ($link == 'test_ok') {
+    if ($link === 'test_ok') {
       usleep(500000);
       return 'test ok';
     } else {
