@@ -13,5 +13,5 @@
 
 
 
-Route::get('/sendmail/{info}', 'MailController@sendMail');
+Route::get('/sendmail/{info}/{receiverAddress}', 'MailController@sendMail');
 

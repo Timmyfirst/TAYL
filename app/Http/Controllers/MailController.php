@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Mail\OrderShipped;
+use App\Mail\MailShipped;
 use Mail;
 
 class MailController extends Controller
@@ -86,15 +86,15 @@ class MailController extends Controller
 
 
 
-    public function sendMail(Request $request, $info)
+    public function sendMail(Request $request, $info,$receiverAddress)
     {
-        if($info == 'begin'){
+        if($info === 'begin'){
             $content = [
                 'title'=> 'TAYL',
                 'body'=> 'Vos fichier vont être analysé',
                 'button' => 'Click Here'
             ];
-        }elseif ($info == 'end') {
+        }elseif ($info === 'end') {
             $content = [
                 'title'=> 'TAYL',
                 'body'=> 'Vos fichier on fini d être analysé',
@@ -102,12 +102,11 @@ class MailController extends Controller
             ];
         }
 
+       // $receiverAddress = 'alexandre.chhuok@gmail.com';
 
-        $receiverAddress = 'alexandre.chhuok@gmail.com';
+        Mail::to($receiverAddress)->send(new MailShipped($content));
 
-        Mail::to($receiverAddress)->send(new OrderShipped($content));
 
-        dd('votre mail a bien été envoyé');
     }
 
 }
