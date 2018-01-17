@@ -19,3 +19,36 @@ phpcs /yourFolder/<br>
 
 /*Creat table*/<br>
 php artisan make:migration create_logTests_table
+
+
+
+#Installation redis
+Do this command as sudo
+
+`cd /usr/src` <br>
+`wget -c http://download.redis.io/redis-stable.tar.gz` <br>
+`wget -c http://download.redis.io/redis-stable.tar.gz` <br>
+`tar xvzf redis-stable.tar.gz` <br>
+`cd redis-stable` <br>
+`make` <br>
+`make install` <br>
+`utils/install_server.sh` <br>
+
+Check if redis is install :  <br>
+`redis-cli ping`   <br>
+and return pong
+
+#Code Sniffer
+/* Install pear*/<br>
+sudo apt-get install php-pear<br>
+/*update pear*/<br>
+sudo bash -c "command pear channel-update pear.php.net && command pear upgrade PEAR"<br>
+/*install code sniffer with pear*/<br>
+sudo pear install PHP_CodeSniffer<br>
+/* Use CodeSniffer*/<br>
+phpcs /yourFolder/<br>
+
+Créer un dossier 'storage/app/public/project' où sera stocker le code à tester et créer un dossier 'storage/app/public/logProject' où sera stocker les fichier log 
+
+faire un php artisan migrate pour ajouter la table logTests
+
