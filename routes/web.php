@@ -15,6 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/check/{link}','ApiEntryController@store');
+
+
+
+Route::get('/sniff', 'CodeSnifferController@CreateLog');
+
+
 Route::group(['prefix' => 'queues', 'namespace' => 'Queues'], function() {
     Route::get('startTestProcess', 'StartTestProcessController')
          ->name('queues.startTestProcess');
