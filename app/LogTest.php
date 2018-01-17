@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class LogTest extends Model
 {
-    protected $table ='log';
+    protected $table ='logTests';
 
     /**
      * The attributes that are mass assignable.
