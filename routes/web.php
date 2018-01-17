@@ -20,3 +20,4 @@ Route::get('/check/{link}','ApiEntryController@store');
 
 
 Route::get('/sniff', 'CodeSnifferController@CreateLog');
+

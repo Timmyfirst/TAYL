@@ -2,13 +2,15 @@
 
 namespace App;
 
-//use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
+
 
 
 class LogTest extends Model
 {
     use Notifiable;
+    protected $table ='logTests';
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +18,7 @@ class LogTest extends Model
      * @var array
      */
     protected $fillable = [
-        'path213'
+        'path'
     ];
 
 }
