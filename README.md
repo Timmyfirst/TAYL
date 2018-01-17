@@ -6,16 +6,16 @@ php artisan key:generate<br>
 php artisan migrate:refresh<br>
 php artisan db:seed<br>
 
-#Code Sniffer
-/* Install pear*/
-sudo apt-get install php-pear
-/*update pear*/
-sudo bash -c "command pear channel-update pear.php.net && command pear upgrade PEAR"
-/*install code sniffer with pear*/
-sudo pear install PHP_CodeSniffer
-/* Use CodeSniffer*/
-phpcs /yourFolder/
+#Code Sniffer<br>
+/* Install pear*/<br>
+sudo apt-get install php-pear<br>
+/*update pear*/<br>
+sudo bash -c "command pear channel-update pear.php.net && command pear upgrade PEAR"<br>
+/*install code sniffer with pear*/<br>
+sudo pear install PHP_CodeSniffer<br>
+/* Use CodeSniffer*/<br>
+phpcs /yourFolder/<br>
 
 
-/*Creat table*/
+/*Creat table*/<br>
 php artisan make:migration create_logTests_table
