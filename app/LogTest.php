@@ -16,7 +16,7 @@ class LogTest extends Model
      * @var array
      */
     protected $fillable = [
-        'path'
+        'path213'
     ];
 
 }
