@@ -9,37 +9,39 @@ class DownloadController extends Controller
 
   public function store($link)
   {
-      $link = 'https://github.com/exakat/php-static-analysis-tools.git';
-      $link_decode = urldecode($link);
-      $nom_proj = substr($link_decode, (strrpos($link_decode, '/', -1) + 1), (strlen($link_decode) - strrpos($link_decode, '/', -1) - 5));
-      //https://github.com/exakat/php-static-analysis-tools.git
+      //$link_decode = urldecode($link);
 
+      /* Constitution du nom du projet */
+      $nom_proj = substr($link_decode, (strrpos($link_decode, '/', -1) + 1), (strlen($link_decode) - strrpos($link_decode, '/', -1) - 5));
+
+      /* Initialisation de la commande de clone */
       $command = '';
 
+      /* Récupération de l'emplacement du dossier "public" */
+      $dir = shell_exec('pwd');
+
+      /* Liste des commandes à faire */
       $commands_arr = array(
-        1 => "cd /home/apprenant/Bureau/V/TAYL-back/public/",
-        2 => "git clone " . $link,
-        3 => "cd " . $nom_proj
+        1 => "git clone " . $link,
+        2 => "cd " . $nom_proj
       );
 
-      $cmd_count = "cd /home/apprenant/Bureau/V/TAYL-back/public/" . $nom_proj . " && ls -1 | wc -l";
-      /*
+      /* Composition de la commande pour compter les fichiers */
+      $cmd_count = "cd " . substr($dir, 0, strlen($dir)-1) . "/" . $nom_proj . " && ls -1 | wc -l";
+
+      /* Composition de la commande de clone */
       for ($i = 1; $i <= count($commands_arr); $i++) {
-          if ($i = 1) {
-            $command = $commands_arr[$i] . ' && ';
-          } elseif ($i = count($commands_arr)) {
+          if ($i == count($commands_arr)) {
             $command = $command . $commands_arr[$i];
           } else {
             $command = $command . $commands_arr[$i] . ' && ';
           }
-      }*/
+      }
 
-      $command = $commands_arr[1] . ' && ' . $commands_arr[2] . ' && ' . $commands_arr[3];
-
-      //return
+      /* Exécution */
       shell_exec($command);
-
-      //return count($commands_arr);
+      
+      /* Exécution  et retour */
       return shell_exec($cmd_count);
   }
 
