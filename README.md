@@ -7,7 +7,6 @@ php artisan migrate:refresh<br>
 php artisan db:seed<br>
 
 
-
 #Installation redis
 Do this command as sudo
 
@@ -33,7 +32,6 @@ copy .env with queue driver as redis
 
 `http://127.0.0.1:8000/queues/startTestProcess?urlGit=https://github.com/Timmyfirst/TAYL-back.git`
 
-
 #Code Sniffer
 /* Install pear*/<br>
 sudo apt-get install php-pear<br>
@@ -53,5 +51,4 @@ mkdir storage/app/public/project   /* files log stored */
 git clone in  storage/app/public/project
 
 push in url : http://127.0.0.1:8000/sniff
-
 

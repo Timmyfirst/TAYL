@@ -22,7 +22,11 @@ Route::get('/check/{link}','ApiEntryController@store');
 Route::get('/sniff', 'CodeSnifferController@CreateLog');
 
 
+Route::get('/donation', 'donationPayPalController@view');
+
+
 Route::group(['prefix' => 'queues', 'namespace' => 'Queues'], function() {
     Route::get('startTestProcess', 'StartTestProcessController')
          ->name('queues.startTestProcess');
+
 });
