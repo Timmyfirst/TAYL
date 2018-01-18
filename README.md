@@ -48,7 +48,17 @@ sudo pear install PHP_CodeSniffer<br>
 /* Use CodeSniffer*/<br>
 phpcs /yourFolder/<br>
 
-Créer un dossier 'storage/app/public/project' où sera stocker le code à tester et créer un dossier 'storage/app/public/logProject' où sera stocker les fichier log 
+do 'php artisan migrate' for add table : logTests
 
-faire un php artisan migrate pour ajouter la table logTests
+/* create directory */
+mkdir storage/app/public/logProject /* For code test stored */
+mkdir storage/app/public/project   /* files log stored */ 
+
+git clone in  storage/app/public/project
+
+push in url : http://127.0.0.1:8000/sniff
+
+
+
+
 
