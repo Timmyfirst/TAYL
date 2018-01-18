@@ -6,6 +6,7 @@ php artisan key:generate<br>
 php artisan migrate:refresh<br>
 php artisan db:seed<br>
 
+
 #Installation redis
 Do this command as sudo
 
@@ -21,6 +22,15 @@ Do this command as sudo
 Check if redis is install :  <br>
 `redis-cli ping`   <br>
 and return pong
+
+copy .env with queue driver as redis
+
+`php artisan cache:clear`
+
+`php artisan vendor:publish --provider="Laravel\Horizon\HorizonServiceProvider"`
+
+
+`http://127.0.0.1:8000/queues/startTestProcess?urlGit=https://github.com/Timmyfirst/TAYL-back.git`
 
 #Code Sniffer
 /* Install pear*/<br>
@@ -41,8 +51,4 @@ do 'php artisan migrate' for add table : logTests <br>
 `git clone /YourProject/` in  storage/app/public/project <br>
 
 push in url : http://127.0.0.1:8000/sniff
-
-
-
-
 
