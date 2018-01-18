@@ -1,27 +1,28 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "jpcaparas/laravel-horizon-demo",
+    "description": "A demo on Laravel Horizon queue capabilities",
+    "keywords": ["horizon", "queues", "redis", "laravel"],
     "license": "MIT",
     "type": "project",
+    "author": "JP Caparas <jp@jpcaparas.com>",
     "require": {
-        "php": ">=7.0.0",
+        "php": "^7.1",
         "fideloper/proxy": "~3.3",
+        "kitetail/zttp": "~0.2",
         "laravel/framework": "5.5.*",
+        "laravel/horizon": "^0.1.0",
         "laravel/tinker": "~1.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.1",
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",
-        "mockery/mockery": "~1.0",
-        "phpunit/phpunit": "~6.0",
-        "symfony/thanks": "^1.0"
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "~6.0"
     },
     "autoload": {
         "classmap": [
-            "database/seeds",
-            "database/factories"
+            "database"
         ],
         "psr-4": {
             "App\\": "app/"
@@ -39,6 +40,7 @@
         }
     },
     "scripts": {
+        "post-install-cmd": [],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
@@ -54,5 +56,7 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "optimize-autoloader": true
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

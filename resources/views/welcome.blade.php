@@ -11,6 +11,8 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
+
+        {{csrf_field()}}
         <style>
             html, body {
                 background-color: #fff;
@@ -68,12 +70,12 @@
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
-                    @auth
+                    @if (Auth::check())
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
+                        <a href="{{ url('/login') }}">Login</a>
+                        <a href="{{ url('/register') }}">Register</a>
+                    @endif
                 </div>
             @endif
 
@@ -82,13 +84,21 @@
                     Laravel
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <form method="post"  action="{{url('queues/startTestProcess')}}">
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="form-group col-md-4">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" name="name">
+                        </div>
+                    </div>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="form-group col-md-4">
+                        <button type="submit" class="btn btn-success" style="margin-left:38px">Add Product</button>
+                    </div>
                 </div>
+                </form>
             </div>
         </div>
     </body>
