@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/check/{link}','ApiEntryController@store');
+
+
+
+Route::get('/sniff', 'CodeSnifferController@CreateLog');
+
