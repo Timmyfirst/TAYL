@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 class donationPayPalController extends Controller
 {
 
-    public function view(){
+    public function donationPayPalRender(){
         return view('donation/donationPayPal');
     }
+
 }
