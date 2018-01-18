@@ -32,3 +32,26 @@ copy .env with queue driver as redis
 
 
 `http://127.0.0.1:8000/queues/startTestProcess?urlGit=https://github.com/Timmyfirst/TAYL-back.git`
+
+
+#Code Sniffer
+/* Install pear*/<br>
+sudo apt-get install php-pear<br>
+/*update pear*/<br>
+sudo bash -c "command pear channel-update pear.php.net && command pear upgrade PEAR"<br>
+/*install code sniffer with pear*/<br>
+sudo pear install PHP_CodeSniffer<br>
+/* Use CodeSniffer*/<br>
+phpcs /yourFolder/<br>
+
+do 'php artisan migrate' for add table : logTests
+
+/* create directory */
+mkdir storage/app/public/logProject /* For code test stored */
+mkdir storage/app/public/project   /* files log stored */ 
+
+git clone in  storage/app/public/project
+
+push in url : http://127.0.0.1:8000/sniff
+
+
