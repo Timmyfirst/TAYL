@@ -29,5 +29,4 @@ Route::get('/donationPayPal', 'donationPayPalController@donationPayPalRender');
 Route::group(['prefix' => 'queues', 'namespace' => 'Queues'], function() {
     Route::get('startTestProcess', 'StartTestProcessController')
          ->name('queues.startTestProcess');
-
 });
