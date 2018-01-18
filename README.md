@@ -24,21 +24,21 @@ and return pong
 
 #Code Sniffer
 /* Install pear*/<br>
-sudo apt-get install php-pear<br>
+`sudo apt-get install php-pear`<br>
 /*update pear*/<br>
-sudo bash -c "command pear channel-update pear.php.net && command pear upgrade PEAR"<br>
+`sudo bash -c "command pear channel-update pear.php.net && command pear upgrade PEAR"`<br>
 /*install code sniffer with pear*/<br>
-sudo pear install PHP_CodeSniffer<br>
+`sudo pear install PHP_CodeSniffer`<br>
 /* Use CodeSniffer*/<br>
-phpcs /yourFolder/<br>
+`phpcs /yourFolder/`<br>
 
-do 'php artisan migrate' for add table : logTests
+do 'php artisan migrate' for add table : logTests <br>
 
-/* create directory */
-mkdir storage/app/public/logProject /* For code test stored */
-mkdir storage/app/public/project   /* files log stored */ 
+/* create directory */ <br>
+`mkdir storage/app/public/logProject`  /*  For code test stored */ <br>
+`mkdir storage/app/public/project`    /*  files log stored */  <br>
 
-git clone in  storage/app/public/project
+`git clone /YourProject/` in  storage/app/public/project <br>
 
 push in url : http://127.0.0.1:8000/sniff
 
