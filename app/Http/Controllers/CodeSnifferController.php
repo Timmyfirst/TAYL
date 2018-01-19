@@ -12,7 +12,7 @@ class CodeSnifferController extends Controller
 {
     public function CreateCodeSnifferLog(){
 
-        /*recupere la date pour le mettre à la fin du nom de fichier log*/
+        /*get the date to put it at the end of the log file name*/
         $date =  date('Y_m_d_G-i-s');
         $nameLogFile= 'logSniff'.$date.'.txt';
         $pathStorage = public_path() . "/storage/";
