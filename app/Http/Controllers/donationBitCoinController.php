@@ -14,13 +14,13 @@ class donationBitCoinController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    private $adressBitCoin = '1J9NHCGjuZnQcyHN35zZEagJ8Q2Nzjoyno';
+    private $addressBitCoin = '1J9NHCGjuZnQcyHN35zZEagJ8Q2Nzjoyno';
     private $urlQrCode = 'https://blockchain.info/fr/qr?data=1J9NHCGjuZnQcyHN35zZEagJ8Q2Nzjoyno&size=200';
 
 
     public function donationPayPalRender(){
 
-        return  View::make('donation/donationBitCoin', array('adressBitCoin' => $this->adressBitCoin, 'urlQrCode' => $this->urlQrCode));
+        return  View::make('donation/donationBitCoin', array('addressBitCoin' => $this->addressBitCoin, 'urlQrCode' => $this->urlQrCode));
     }
 
 
