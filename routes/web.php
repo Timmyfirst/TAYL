@@ -25,8 +25,12 @@ Route::get('/sniff', 'CodeSnifferController@CreateLog');
 Route::get('/donationPayPal', 'donationPayPalController@donationPayPalRender');
 
 
+Route::get('/donationBitCoin', 'donationBitCoinController@donationPayPalRender');
+
+
 
 Route::group(['prefix' => 'queues', 'namespace' => 'Queues'], function() {
     Route::get('startTestProcess', 'StartTestProcessController')
          ->name('queues.startTestProcess');
+
 });
