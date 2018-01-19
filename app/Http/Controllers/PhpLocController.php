@@ -20,7 +20,7 @@ class PhpLocController extends Controller
         /*execute a command to execute "phploc" and send the result to a log file*/
         shell_exec( 'cd '.$pathStorage .' && phploc project > logProject/'.$nameLogFile);
 
-        /*Insert dans la table log*/
+        /*Insert in log table*/
         $logTest = new LogTest;
         $logTest->path = '/logProject/'.$nameLogFile;
         $logTest->type = 'PhpLoc';

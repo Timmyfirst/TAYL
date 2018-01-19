@@ -20,7 +20,7 @@ class CodeSnifferController extends Controller
         /*execute a command to execute "code sniffer" and send the result to a log file*/
         shell_exec( 'cd '.$pathStorage .' && phpcs project > logProject/'.$nameLogFile);
 
-        /*Insert dans la table log*/
+        /*Insert in log table */
         $logTest = new LogTest;
         $logTest->path = '/logProject/'.$nameLogFile;
         $logTest->type = 'CodeSniffer';
