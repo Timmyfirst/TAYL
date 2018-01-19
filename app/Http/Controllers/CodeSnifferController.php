@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\DB;
 
 class CodeSnifferController extends Controller
 {
-    public function CreateLog(){
+    public function CreateCodeSnifferLog(){
 
         /*recupere la date pour le mettre à la fin du nom de fichier log*/
-        $date =  date('YmdGis');
+        $date =  date('Y_m_d_G-i-s');
         $nameLogFile= 'logSniff'.$date.'.txt';
         $pathStorage = public_path() . "/storage/";
 
@@ -23,6 +23,7 @@ class CodeSnifferController extends Controller
         /*Insert dans la table log*/
         $logTest = new LogTest;
         $logTest->path = '/logProject/'.$nameLogFile;
+        $logTest->type = 'CodeSniffer';
         $logTest->save();
     }
 
