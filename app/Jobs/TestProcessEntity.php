@@ -4,6 +4,8 @@ namespace App\Jobs;
 
 use App\Notifications\TestedProcessEntity;
 use App\User;
+use App\Http\Controllers\CodeSnifferController;
+use App\Http\Controllers\DownloadController;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
@@ -64,8 +66,13 @@ class TestProcessEntity implements ShouldQueue
 
             throw new \RuntimeException($error);
         }
+        /*
+        $codeSniffer = new CodeSnifferController();
+        $downloadObject = new DownloadController();
 
-        $this->getUser()->notify(new TestedProcessEntity($response->json()));
+        $codeSniffer->CreateLog($downloadObject->getProjectName($url));
+
+        $this->getUser()->notify(new TestedProcessEntity($response->json()));*/
     }
 
     /**
