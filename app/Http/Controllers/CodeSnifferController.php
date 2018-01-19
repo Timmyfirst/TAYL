@@ -17,7 +17,7 @@ class CodeSnifferController extends Controller
         $nameLogFile= 'logSniff'.$date.'.txt';
         $pathStorage = public_path() . "/storage/";
 
-        /*execute une commande permettant d'executer code sniffer et d'envoyer le resultat dans un fichier log*/
+        /*execute a command to execute "code sniffer" and send the result to a log file*/
         shell_exec( 'cd '.$pathStorage .' && phpcs project > logProject/'.$nameLogFile);
 
         /*Insert dans la table log*/

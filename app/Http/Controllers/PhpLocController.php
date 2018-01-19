@@ -12,12 +12,12 @@ class PhpLocController extends Controller
 {
     public function CreatePhpLocLog(){
 
-        /*recupere la date pour le mettre à la fin du nom de fichier log*/
+        /*get the date to put it at the end of the log file name*/
         $date =  date('Y_m_d_G-i-s');
         $nameLogFile= 'logPhpLoc'.$date.'.txt';
         $pathStorage = public_path() . "/storage/";
 
-        /*execute une commande permettant d'executer code sniffer et d'envoyer le resultat dans un fichier log*/
+        /*execute a command to execute "phploc" and send the result to a log file*/
         shell_exec( 'cd '.$pathStorage .' && phploc project > logProject/'.$nameLogFile);
 
         /*Insert dans la table log*/
