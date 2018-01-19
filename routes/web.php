@@ -17,15 +17,17 @@ Route::get('/', function () {
 
 Route::get('/check/{link}','ApiEntryController@store');
 
-
+Route::get('/download/{link}','DownloadController@store');
 
 Route::get('/sniff', 'CodeSnifferController@CreateLog');
+
 
 
 Route::get('/donationPayPal', 'donationPayPalController@donationPayPalRender');
 
 
 Route::get('/donationBitCoin', 'donationBitCoinController@donationPayPalRender');
+
 
 
 
