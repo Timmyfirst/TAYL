@@ -1,7 +1,7 @@
-adresse BitCoin :
+Bitcoin address :
 
 
-{{$adressBitCoin}}<br>
+{{$addressBitCoin}}<br>
 <br>
 QR Code :
 <br>
