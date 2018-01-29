@@ -52,3 +52,13 @@ do 'php artisan migrate' for add table : logTests <br>
 
 push in url : http://127.0.0.1:8000/sniff
 
+
+#PhpLoc
+/* Install PhpLoc*/ <br>
+`wget https://phar.phpunit.de/phploc.phar` <br>
+`chmod +x phploc.phar` <br>
+`mv phploc.phar /usr/local/bin/phploc` <br>
+
+`phploc \YourFolder\` <br>
+
+push in url : http://127.0.0.1:8000/PhpLoc
