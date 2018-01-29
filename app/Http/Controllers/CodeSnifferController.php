@@ -15,10 +15,10 @@ class CodeSnifferController extends Controller
         /*get the date to put it at the end of the log file name*/
         $date =  date('Y_m_d_G-i-s');
         $nameLogFile= 'logSniff'.$date.'.txt';
-        $pathStorage = public_path() . "/storage/";
+        $pathStorage = public_path() . "/storage/app/public";
 
         /*execute a command to execute "code sniffer" and send the result to a log file*/
-        shell_exec( 'cd '.$pathStorage .' && phpcs project > logProject/'.$nameLogFile);
+        shell_exec('cd '.$pathStorage .' && phpcs ' . $proj_name . ' > logProject/'.$nameLogFile);
 
         /*Insert in log table */
         $logTest = new LogTest;
