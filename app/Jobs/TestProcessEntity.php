@@ -44,6 +44,7 @@ class TestProcessEntity implements ShouldQueue
      */
     public function handle()
     {
+        /*
         $headers = ['Content-Type' => 'application/json'];
         $url = sprintf(
             url()->to('/'), $this->getUrlGit()
@@ -51,7 +52,7 @@ class TestProcessEntity implements ShouldQueue
 
         /**
          * @var ZttpResponse $response
-         */
+
         $response = Zttp::withHeaders($headers)->get($url);
 
         if (empty($response) === true || 200 !== $response->status()) {
@@ -73,6 +74,9 @@ class TestProcessEntity implements ShouldQueue
         $codeSniffer->CreateLog($downloadObject->getProjectName($url));
 
         $this->getUser()->notify(new TestedProcessEntity($response->json()));*/
+
+        
+
     }
 
     /**

@@ -16,6 +16,7 @@ return [
     */
 
     'default' => env('QUEUE_DRIVER', 'sync'),
+    'perso' => env('QUEUE_DRIVER', 'redis'),
 
     /*
     |--------------------------------------------------------------------------

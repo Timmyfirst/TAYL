@@ -28,23 +28,19 @@ class StartTestProcessController extends Controller
         $urlGit = $request->urlGit;
         $message = '';
         try {
-            /** function gitClone */
+            /** function gitClone **/
             $download->store($urlGit);
 
-            $codeSniffer = new CodeSnifferController();
+            $message .= 'git clone success ';
 
-            $codeSniffer->CreateLog($download->getProjectName($urlGit));
-
-            $message .= 'git clone success';
         } catch (ModelNotFoundException $exception) {
             abort(Response::HTTP_BAD_REQUEST, 'Url does not exist.');
         }
 
+        /** function tests **/
+        dispatch(new TestProcessEntity($urlGit));
 
-            /** function tests **/
-            dispatch(new TestProcessEntity($urlGit));
-
-        //$message .= 'An email has been dispatched to userName about a test for this git Project ' . $urlGit;
+        $message .= 'An email has been dispatched to userName about a test for this git Project ' . $urlGit;
 
         return response($message, Response::HTTP_OK, ['Content-Type' => 'text/plain']);
     }
