@@ -16,6 +16,7 @@ class CreateLogTestsTable extends Migration
         Schema::create('logTests', function (Blueprint $table) {
             $table->increments('id');
             $table->string('path');
+            $table->string('type');
             $table->timestamps();
         });
     }

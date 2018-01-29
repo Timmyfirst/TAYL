@@ -19,7 +19,11 @@ Route::get('/check/{link}','ApiEntryController@store');
 
 Route::get('/download/{link}','DownloadController@store');
 
-Route::get('/sniff', 'CodeSnifferController@CreateLog');
+
+Route::get('/sniff', 'CodeSnifferController@CreateCodeSnifferLog');
+
+
+Route::get('/PhpLoc', 'PhpLocController@CreatePhpLocLog');
 
 
 
@@ -34,4 +38,6 @@ Route::get('/donationBitCoin', 'donationBitCoinController@donationPayPalRender')
 Route::group(['prefix' => 'queues', 'namespace' => 'Queues'], function() {
     Route::get('startTestProcess', 'StartTestProcessController')
          ->name('queues.startTestProcess');
+
 });
+

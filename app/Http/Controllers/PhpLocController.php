@@ -8,24 +8,22 @@ use App\LogTest;
 use Illuminate\Support\Facades\DB;
 
 
-class CodeSnifferController extends Controller
+class PhpLocController extends Controller
 {
-    public function CreateCodeSnifferLog(){
+    public function CreatePhpLocLog(){
 
         /*get the date to put it at the end of the log file name*/
         $date =  date('Y_m_d_G-i-s');
-        $nameLogFile= 'logSniff'.$date.'.txt';
+        $nameLogFile= 'logPhpLoc'.$date.'.txt';
         $pathStorage = public_path() . "/storage/";
 
-        /*execute a command to execute "code sniffer" and send the result to a log file*/
-        shell_exec( 'cd '.$pathStorage .' && phpcs project > logProject/'.$nameLogFile);
+        /*execute a command to execute "phploc" and send the result to a log file*/
+        shell_exec( 'cd '.$pathStorage .' && phploc project > logProject/'.$nameLogFile);
 
-        /*Insert in log table */
+        /*Insert in log table*/
         $logTest = new LogTest;
         $logTest->path = '/logProject/'.$nameLogFile;
-        $logTest->type = 'CodeSniffer';
+        $logTest->type = 'PhpLoc';
         $logTest->save();
     }
-
-
 }
