@@ -29,6 +29,8 @@ copy .env with queue driver as redis
 
 `php artisan vendor:publish --provider="Laravel\Horizon\HorizonServiceProvider"`
 
+#Link storage and public
+php artisan storage:link
 
 `http://127.0.0.1:8000/queues/startTestProcess?urlGit=https://github.com/Timmyfirst/TAYL-back.git`
 
@@ -52,3 +54,13 @@ do 'php artisan migrate' for add table : logTests <br>
 
 push in url : http://127.0.0.1:8000/sniff
 
+
+#PhpLoc
+/* Install PhpLoc*/ <br>
+`wget https://phar.phpunit.de/phploc.phar` <br>
+`chmod +x phploc.phar` <br>
+`mv phploc.phar /usr/local/bin/phploc` <br>
+
+`phploc \YourFolder\` <br>
+
+push in url : http://127.0.0.1:8000/PhpLoc
