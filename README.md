@@ -64,3 +64,6 @@ push in url : http://127.0.0.1:8000/sniff
 `phploc \YourFolder\` <br>
 
 push in url : http://127.0.0.1:8000/PhpLoc
+
+#Email commands
+composer require guzzlehttp/guzzle

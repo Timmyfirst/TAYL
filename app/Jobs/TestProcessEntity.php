@@ -11,9 +11,10 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Log;
+use Illuminate\Support\Facades\Log;
 use Zttp\Zttp;
 use Zttp\ZttpResponse;
+use Exception;
 
 class TestProcessEntity implements ShouldQueue
 {
@@ -30,20 +31,22 @@ class TestProcessEntity implements ShouldQueue
     /**
      * Create a new job instance.
      *
+     *  commande pour créer un job : php artisan make:job nomDuJobEntity
+     *
      * @param string $urlGit
      */
     public function __construct(string $urlGit)
     {
+        /** ajouter un paramètre */
         $this->setUrlGit($urlGit);
     }
 
     /**
      * Execute the job.
-     *
-     * @return void
      */
     public function handle()
     {
+<<<<<<< HEAD
         /*
         $headers = ['Content-Type' => 'application/json'];
         $url = sprintf(
@@ -54,17 +57,21 @@ class TestProcessEntity implements ShouldQueue
          * @var ZttpResponse $response
 
         $response = Zttp::withHeaders($headers)->get($url);
+=======
+        /** on a eu pour ordre de lancer cette fonction */
+        /** stop 10sec */
+        usleep(10000000);
 
-        if (empty($response) === true || 200 !== $response->status()) {
-            $error = 'Failed to fetch Url Git entity.';
+        // And sometimes i'll just randomly fail.
+        if(rand(1, 100) >= 10) throw new \Exception('Everything is horrible.');
+>>>>>>> 2ff8aec3ee25e62b1112cc9404f671d78b6fc74e
 
-            Log::error($error, [
-                'url' => $url,
-                'response' => $response->json(),
-                'status' => $response->status(),
-                'headers' => $response->headers(),
+
+        Log::info("Success with this url : ", [
+                'url' => $this->getUrlGit(),
             ]);
 
+<<<<<<< HEAD
             throw new \RuntimeException($error);
         }
         /*
@@ -77,9 +84,22 @@ class TestProcessEntity implements ShouldQueue
 
         
 
+=======
+        return 'ok';
+    }
+
+    public function failed(Exception $exception)
+    {
+        Log::error("error name : ", [
+            'url' => $exception,
+        ]);
+
+        return 'failed';
+>>>>>>> 2ff8aec3ee25e62b1112cc9404f671d78b6fc74e
     }
 
     /**
+     * getter de l'url en paramètre
      * @return string
      */
     public function getUrlGit(): string
@@ -88,7 +108,8 @@ class TestProcessEntity implements ShouldQueue
     }
 
     /**
-     * @param string $urlGit
+     * set l'url en paramètre
+     * @param string $urlGitgetUrlGit
      */
     public function setUrlGit(string $urlGit)
     {
