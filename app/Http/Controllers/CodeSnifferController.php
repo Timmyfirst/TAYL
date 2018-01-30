@@ -21,7 +21,6 @@ class CodeSnifferController extends Controller
         shell_exec( 'cd '.$pathStorage .' && phpcs project > logProject/'.$nameLogFile.'.txt');
         shell_exec( 'cd '.$pathStorage .' && phpcs project --report=json > logProject/'.$nameLogFile.'.json');
 
-
         /*Insert in log table */
         $logTest = new LogTest;
         $logTest->path = '/logProject/'.$nameLogFile;
