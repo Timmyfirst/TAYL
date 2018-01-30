@@ -13,7 +13,7 @@ class StartTestProcessController extends Controller
 {
     public function __construct()
     {
-        //
+        // passage d'arguments si besoin
     }
 
     /**
@@ -22,17 +22,27 @@ class StartTestProcessController extends Controller
      */
     function __invoke(Request $request)
     {
+        $test = ["1","2"];
         $urlGit = $request->urlGit;
         $message = '';
         try {
             /** function gitClone */
             $message .= 'git clone success';
+
+            /** on lance en queue cette fonction */
+            dispatch(new TestProcessEntity($urlGit));
+            dispatch(new TestProcessEntity($urlGit));
+            dispatch(new TestProcessEntity($urlGit));
+            dispatch(new TestProcessEntity($urlGit));
+            dispatch(new TestProcessEntity($urlGit));
+            dispatch(new TestProcessEntity($urlGit));
+
         } catch (ModelNotFoundException $exception) {
+            /** catch en cas d'erreur importante */
             abort(Response::HTTP_BAD_REQUEST, 'Url does not exist.');
         }
 
-            dispatch(new TestProcessEntity($urlGit));
-
+        /** Message envoyé directement sans attendre la fin des dispatch */
         $message .= 'An email has been dispatched to userName about a test for this git Project ' . $urlGit;
 
         return response($message, Response::HTTP_OK, ['Content-Type' => 'text/plain']);
