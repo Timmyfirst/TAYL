@@ -32,7 +32,6 @@ class PhpLocController extends Controller
         $fp=fopen($pathStorage.'/logProject/'.$nameLogFile.'.json','w');
         if ($fp==false)
         {echo 'echec';
-
         }
         else {
             fputs($fp, '[' . $jsonTab . ']');
