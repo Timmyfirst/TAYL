@@ -17,7 +17,7 @@
         border-width: 1px;
         border-style: solid;
         border-radius: 6px;
-        background-color: #55616a;
+        background: radial-gradient(ellipse at center, rgba(107,109,118,1) 10%, rgba(51,78,88,1) 100%);
         color: #fffaea;
       }
       .footer {
