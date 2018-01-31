@@ -21,6 +21,33 @@ class CodeSnifferController extends Controller
         shell_exec( 'cd '.$pathStorage .' && phpcs project > logProject/'.$nameLogFile.'.txt');
         shell_exec( 'cd '.$pathStorage .' && phpcs project --report=json > logProject/'.$nameLogFile.'.json');
 
+
+
+        /*recup logSniff*/
+        $json_source = file_get_contents($pathStorage.'/logProject/'.$nameLogFile.'.json');
+
+        /*check if FinalLogJson exists */
+        $FinalLogJsonExist=  file_exists($pathStorage.'/logProject/FinalLogJson.json');
+        if($FinalLogJsonExist){
+            /*recup FinalLogJson*/
+            $RecupJsonFileFinal = file_get_contents($pathStorage.'/logProject/FinalLogJson.json');
+        }else{
+            /*create FinalLogJson*/
+            file_put_contents($pathStorage.'/logProject/FinalLogJson.json', '');
+            $RecupJsonFileFinal = '';
+        }
+
+        /*delete first and last caratere*/
+        $RecupJsonFileFinal = substr($RecupJsonFileFinal,1,-1);
+        /*check if FinalLogJson is empty and concat FinalLogJson and logPhpLoc  */
+        if(!empty($RecupJsonFileFinal)){
+            $JsonFileFinal= '{'.$RecupJsonFileFinal.',"codeSniff":'.$json_source.'}';
+        }else{
+            $JsonFileFinal= '{"codeSniff":'.$json_source.'}';
+        }
+        /*write in FinalLogJson*/
+        file_put_contents($pathStorage.'/logProject/FinalLogJson.json', $JsonFileFinal);
+
         /*Insert in log table */
         $logTest = new LogTest;
         $logTest->path = '/logProject/'.$nameLogFile;
