@@ -36,25 +36,25 @@ class PhpLocController extends Controller
         $json_source = file_get_contents($pathStorage.'/logProject/'.$nameLogFile.'.json');
 
         /*check if FinalLogJson exists */
-        $FinalLogJsonExist=  file_exists($pathStorage.'/logProject/FinalLogJson.json');
-        if($FinalLogJsonExist){
+        $finalLogJsonExist=  file_exists($pathStorage.'/logProject/FinalLogJson.json');
+        if($finalLogJsonExist){
             /*recup FinalLogJson*/
-            $RecupJsonFileFinal = file_get_contents($pathStorage.'/logProject/FinalLogJson.json');
+            $recupJsonFileFinal = file_get_contents($pathStorage.'/logProject/FinalLogJson.json');
         }else{
             /*create FinalLogJson*/
             file_put_contents($pathStorage.'/logProject/FinalLogJson.json', '');
-            $RecupJsonFileFinal = '';
+            $recupJsonFileFinal = '';
         }
         /*delete first and last caratere*/
-        $RecupJsonFileFinal = substr($RecupJsonFileFinal,1,-1);
+        $recupJsonFileFinal = substr($recupJsonFileFinal,1,-1);
         /*check if FinalLogJson is empty and concat FinalLogJson and logPhpLoc  */
-        if(!empty($RecupJsonFileFinal)){
-                $JsonFileFinal= '{'.$RecupJsonFileFinal.','.$json_source.'}';
+        if(!empty($recupJsonFileFinal)){
+                $jsonFileFinal= '{'.$recupJsonFileFinal.','.$json_source.'}';
             }else{
-                 $JsonFileFinal= '{'.$json_source.'}';
+                $jsonFileFinal= '{'.$json_source.'}';
             }
         /*write in FinalLogJson*/
-        file_put_contents($pathStorage.'/logProject/FinalLogJson.json', $JsonFileFinal);
+        file_put_contents($pathStorage.'/logProject/FinalLogJson.json', $jsonFileFinal);
 
 
 
