@@ -2,6 +2,9 @@
 
 namespace App\Jobs;
 
+use App\JobEntity;
+use App\JobStatus;
+use App\Mail\resultMail;
 use App\Notifications\TestedProcessEntity;
 use App\User;
 use Illuminate\Bus\Queueable;
@@ -10,6 +13,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Zttp\Zttp;
 use Zttp\ZttpResponse;
 use Exception;
@@ -25,6 +29,10 @@ class TestProcessEntity implements ShouldQueue
      */
     private $urlGit;
 
+    private $response;
+
+    private $id_jobEntity;
+
 
     /**
      * Create a new job instance.
@@ -33,10 +41,11 @@ class TestProcessEntity implements ShouldQueue
      *
      * @param string $urlGit
      */
-    public function __construct(string $urlGit)
+    public function __construct(string $urlGit,int $id_jobEntity)
     {
         /** ajouter un paramètre */
         $this->setUrlGit($urlGit);
+        $this->setIdJobEntity($id_jobEntity);
     }
 
     /**
@@ -46,26 +55,49 @@ class TestProcessEntity implements ShouldQueue
     {
         /** on a eu pour ordre de lancer cette fonction */
         /** stop 10sec */
-        usleep(10000000);
+        usleep(100000);
 
         // And sometimes i'll just randomly fail.
-        if(rand(1, 100) >= 10) throw new \Exception('Everything is horrible.');
+//        if(rand(1, 100) >= 50) throw new \Exception('Everything is horrible.');
 
 
-        Log::info("Success with this url : ", [
-                'url' => $this->getUrlGit(),
-            ]);
-
-        return 'ok';
+        $jobStatus = new JobStatus();
+        $jobEntity = new JobEntity();
+        $jobEntity::find($this->getIdJobEntity());
+        $jobEntity->jobs_list_id = $jobEntity->jobsList()->first()->id;
+        $jobEntity->job_status_id = $jobStatus::find(2);
+        $jobEntity->save();
     }
 
     public function failed(Exception $exception)
     {
-        Log::error("error name : ", [
-            'url' => $exception,
+        Log::error("failed job error name : ", [
+            'error' => "mon erreur",
         ]);
 
+        $jobStatus = new JobStatus();
+        $jobEntity = new JobEntity();
+        $jobEntity::find($this->getIdJobEntity());
+        $jobEntity->jobs_list_id = $jobEntity->jobsList()->first()->id;
+        $jobEntity->job_status_id = $jobStatus::find(3);;
+        $jobEntity->save();
+
         return 'failed';
+    }
+
+    public function getResponse()
+    {
+        return $this->response;
+    }
+
+
+    /**
+     * set l'url en paramètre
+     * @param string $urlGitgetUrlGit
+     */
+    public function setResponse(string $response)
+    {
+        $this->response = $response;
     }
 
     /**
@@ -84,5 +116,23 @@ class TestProcessEntity implements ShouldQueue
     public function setUrlGit(string $urlGit)
     {
         $this->urlGit = $urlGit;
+    }
+
+    /**
+     * getter de l'url en paramètre
+     * @return string
+     */
+    public function getIdJobEntity(): string
+    {
+        return $this->id_jobEntity;
+    }
+
+    /**
+     * set l'url en paramètre
+     * @param string $urlGitgetUrlGit
+     */
+    public function setIdJobEntity(string $id_jobEntity)
+    {
+        $this->id_jobEntity = $id_jobEntity;
     }
 }
