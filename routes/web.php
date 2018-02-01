@@ -32,12 +32,10 @@ Route::get('/donationPayPal', 'donationPayPalController@donationPayPalRender');
 
 Route::get('/donationBitCoin', 'donationBitCoinController@donationPayPalRender');
 
-
-
+Route::get('/mail/{address}/test/{test}/projet/{projet}/filename/{filename}', 'SendMailController@sendMail');
 
 Route::group(['prefix' => 'queues', 'namespace' => 'Queues'], function() {
     Route::get('startTestProcess', 'StartTestProcessController')
          ->name('queues.startTestProcess');
 
 });
-
