@@ -44,9 +44,6 @@ class TestFrontBackEntity implements ShouldQueue
             'jobentity status' => $wip->id,
         ]);
 
-        function Alexandre(){
-
-        };
 
         saveJobEntitySuccess($this->jobEntity->id);
 
