@@ -30,11 +30,7 @@ class StartTestProcessController extends Controller
         $jobsList = new JobsList();
         $jobsList->save();
 
-        $jobEntity = new JobEntity();
-        $wip = JobStatus::find(1);
-        $jobEntity->job_status_id = $wip->id;
-        $jobEntity->jobs_list_id = $jobsList->id;
-        $jobEntity->save();
+        $jobEntity = createJobEntity($jobsList->id);
 
         Log::info("launch this job", [
             'jobentity id' =>  $jobEntity->id,
