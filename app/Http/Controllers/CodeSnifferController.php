@@ -12,15 +12,17 @@ class CodeSnifferController extends Controller
 {
     public function CreateCodeSnifferLog(){
 
+        /* Get project name */
+//        $proj_name = $this->getProjectName($link);
+
         /*get the date to put it at the end of the log file name*/
         $date =  date('Y_m_d_G-i-s');
-        $nameLogFile= 'logSniff'.$date;
+        $nameLogFile= 'logSniff_'.$date;
         $pathStorage = public_path() . "/storage/";
 
         /*execute a command to execute "code sniffer" and send the result to a log file*/
         shell_exec( 'cd '.$pathStorage .' && phpcs project > logProject/'.$nameLogFile.'.txt');
         shell_exec( 'cd '.$pathStorage .' && phpcs project --report=json > logProject/'.$nameLogFile.'.json');
-
 
 
         /*recup logSniff*/
@@ -54,6 +56,11 @@ class CodeSnifferController extends Controller
         $logTest->type = 'CodeSniffer';
         $logTest->save();
     }
+
+    /* Make project name */
+//    private function getProjectName($link) {
+//        return $proj_name = substr($link, (strrpos($link, '/', -1) + 1), (strlen($link) - strrpos($link, '/', -1) - 5));
+//    }
 
 
 }
