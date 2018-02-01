@@ -44,28 +44,22 @@ class TestFrontBackEntity implements ShouldQueue
             'jobentity status' => $wip->id,
         ]);
 
-        $JobEntity = JobEntity::find($this->jobEntity->id);
-        $JobEntity->job_status_id = $wip->id;
-        $JobEntity->save();
+
+        saveJobEntitySuccess($this->jobEntity->id);
 
         Log::info("save job entity", [
-            'jobentity id' => $JobEntity->id,
-            'jobentity status' => $JobEntity->job_status_id,
+            'jobentity id' => $this->jobEntity->id,
         ]);
     }
 
     /**
-     *
+     **
      */
     public function failed()
     {
-        $wip = JobStatus::find(3);
-        $JobEntity = JobEntity::find($this->jobEntity->id);
-        $JobEntity->job_status_id = $wip->id;
-        $JobEntity->save();
+        saveJobEntityFailed($this->jobEntity->id);
         Log::info("mon id job entity failed", [
             'jobentity id' => $this->jobEntity->id,
-            'jobentity status' => $wip->id,
         ]);
     }
 
