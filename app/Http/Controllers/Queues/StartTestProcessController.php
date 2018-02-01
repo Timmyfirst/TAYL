@@ -45,5 +45,10 @@ class StartTestProcessController extends Controller
 
         return "test in process";
 
+
+        return response()->json([
+            'StartTestProcessController' => 'check',
+            'idJobList' => $jobEntity->jobs_list_id
+        ]);
     }
 }
