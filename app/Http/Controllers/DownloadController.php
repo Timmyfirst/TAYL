@@ -17,7 +17,7 @@ class DownloadController extends Controller
       $command = '';
 
       /* get path of "public" directory */
-      $dir = shell_exec('pwd');
+      $dir = public_path() . "/storage/project";
 
       /* Get count command */
       $cmd_count = $this->getCmdCount($dir, $proj_name);
@@ -26,10 +26,10 @@ class DownloadController extends Controller
       $command = $this->getCmdDownload($link, $proj_name);
 
       /* Execution of command */
-      shell_exec($command);
+      return shell_exec($command.'2>&1');
 
       /* Execution and return */
-      return shell_exec($cmd_count);
+
   }
 
   /* Make project name */
@@ -42,7 +42,7 @@ class DownloadController extends Controller
     $command = '';
 
     $commands_arr = array(
-      1 => "git clone " . $link,
+      1 => "cd ".public_path()."/storage/project && git clone --depth 1 " . $link,
       2 => "cd " . $proj_name
     );
 
