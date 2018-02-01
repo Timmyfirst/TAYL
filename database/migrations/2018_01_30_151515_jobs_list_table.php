@@ -19,13 +19,13 @@ class JobsListTable extends Migration
         });
     }
 
-//    /**
-//     * Reverse the migrations.
-//     *
-//     * @return void
-//     */
-//    public function down()
-//    {
-//        Schema::dropIfExists('jobs_list');
-//    }
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('jobs_list');
+    }
 }

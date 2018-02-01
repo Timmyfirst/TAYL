@@ -27,6 +27,6 @@ class JobStatusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('logTests');
+        Schema::dropIfExists('job_status');
     }
 }

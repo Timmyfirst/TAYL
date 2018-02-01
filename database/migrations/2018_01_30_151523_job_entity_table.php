@@ -17,26 +17,22 @@ class JobEntityTable extends Migration
             $table->increments('id');
 
             $table->integer('jobs_list_id')->unsigned();
-//            $table->integer('job_list_id')->default(0);
             $table->foreign('jobs_list_id')->references('id')->on('jobs_list');
 
-//
             $table->integer('job_status_id')->unsigned();
-//            $table->integer('job_status_id')->default(0);
-
             $table->foreign('job_status_id')->references('id')->on('job_status');
 
             $table->timestamps();
         });
     }
 
-//    /**
-//     * Reverse the migrations.
-//     *
-//     * @return void
-//     */
-//    public function down()
-//    {
-//        Schema::dropIfExists('job_entity');
-//    }
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('job_entity');
+    }
 }
