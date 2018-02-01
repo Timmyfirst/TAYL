@@ -17,7 +17,7 @@ class CodeSnifferController extends Controller
 
         /*get the date to put it at the end of the log file name*/
         $date =  date('Y_m_d_G-i-s');
-        $nameLogFile= 'logSniff_'.$date;
+        $nameLogFile= 'logSniff'.$date;
         $pathStorage = public_path() . "/storage/";
 
         /*execute a command to execute "code sniffer" and send the result to a log file*/
