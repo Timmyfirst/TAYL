@@ -37,54 +37,36 @@ class TestFrontBackEntity implements ShouldQueue
      */
     public function handle()
     {
-        /** on a eu pour ordre de lancer cette fonction */
-        /** stop 10sec */
-        // And sometimes i'll just randomly fail.
-//        $jobEntity = new JobEntity();
-//        $jobStatus = new JobStatus();
-//        $wip = $jobStatus::find(3);
+        $wip = JobStatus::find(2);
 
-        Log::info("mon id job entity", [
+        Log::info("my job entity", [
             'jobentity id' => $this->jobEntity->id,
-            'jobentity status' =>  "dans handle",
+            'jobentity status' => $wip->id,
         ]);
+
         $JobEntity = JobEntity::find($this->jobEntity->id);
-        $JobEntity->job_status_id = 3;
+        $JobEntity->job_status_id = $wip->id;
         $JobEntity->save();
 
-        Log::info("save", [
+        Log::info("save job entity", [
             'jobentity id' => $JobEntity->id,
-            'jobentity status' =>  $JobEntity->job_status_id,
+            'jobentity status' => $JobEntity->job_status_id,
         ]);
     }
 
-    public function failed(Exception $exception)
-    {
-//        $jobStatus = new JobStatus();
-//        $jobEntity = new JobEntity();
-//        $jobEntity::find($this->getIdJobEntity());
-//        $jobEntity->jobs_list_id = $jobEntity->jobsList()->first()->id;
-//        $jobEntity->job_status_id = $jobStatus::find(3);;
-//        $jobEntity->save();
-
-        return 'failed';
-    }
-
     /**
-     * getter de l'url en paramètre
-     * @return string
+     *
      */
-    public function getIdJobEntity(): string
+    public function failed()
     {
-        return $this->id_jobEntity;
+        $wip = JobStatus::find(3);
+        $JobEntity = JobEntity::find($this->jobEntity->id);
+        $JobEntity->job_status_id = $wip->id;
+        $JobEntity->save();
+        Log::info("mon id job entity failed", [
+            'jobentity id' => $this->jobEntity->id,
+            'jobentity status' => $wip->id,
+        ]);
     }
 
-    /**
-     * set l'url en paramètre
-     * @param string $urlGitgetUrlGit
-     */
-    public function setIdJobEntity(string $id_jobEntity)
-    {
-        $this->id_jobEntity = $id_jobEntity;
-    }
 }

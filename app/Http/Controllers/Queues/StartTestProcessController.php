@@ -19,7 +19,6 @@ class StartTestProcessController extends Controller
 {
     public function __construct()
     {
-        // passage d'arguments si besoin
     }
 
     /**
@@ -28,61 +27,23 @@ class StartTestProcessController extends Controller
      */
     function __invoke(Request $request)
     {
-        $test = ["1", "2"];
-        $urlGit = $request->urlGit;
-        $mailUser = $request->mailUser;
-
-        $message = '';
-
         $jobsList = new JobsList();
         $jobsList->save();
 
-        $jobStatus = new JobStatus();
-
-//        $wip = $jobStatus::find(1);
-//        $jobEntity = new JobEntity();
-//        $jobEntity->job_status_id = $wip->id;
-//        $jobEntity->jobs_list_id = $jobsList->id;
-//        $jobsList->entity()->save($jobEntity);
-//
-//        dispatch(new TestProcessEntity($urlGit,$jobEntity->id));
-
         $jobEntity = new JobEntity();
-        $wip = $jobStatus::find(1);
+        $wip = JobStatus::find(1);
         $jobEntity->job_status_id = $wip->id;
         $jobEntity->jobs_list_id = $jobsList->id;
-//        $jobsList->entity()->save($jobEntity);
         $jobEntity->save();
 
-        Log::info("mon id job entity", [
-            'jobentity status' =>  15,
+        Log::info("launch this job", [
+            'jobentity id' =>  $jobEntity->id,
+            'jobentity JobList id' =>  $jobsList->id,
         ]);
 
-//        $myjob = JobEntity::find($jobEntity->id);
-//        $myjob->jobs_list_id = $myjob->jobsList()->first()->id;
-//        $wip = $jobStatus::find(2);
-//        $myjob->job_status_id =$wip->id;
-//        $myjob->save();
-//        dd($myjob->jobsList()->first()->id);
-
-
         dispatch(new TestFrontBackEntity($jobEntity));
-//        try {
-////            /** function gitClone */
-//            $message .= 'git clone success';
-//
-//            /** on lance en queue cette fonction */
 
-//
-//
-//        } catch (ModelNotFoundException $exception) {
-//            /** catch en cas d'erreur importante */
-//            abort(Response::HTTP_BAD_REQUEST, 'Url does not exist.');
-//        }
-
-        return " test done";
-        /** Message envoyé directement sans attendre la fin des dispatch */
-//        $message .= 'An email has been dispatched to userName about a test for this git Project ' . $urlGit;
+        return "test in process";
 
     }
 }
