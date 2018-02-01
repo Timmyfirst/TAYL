@@ -49,7 +49,6 @@ class StartTestProcessController extends Controller
             'jobentity JobList id' =>  $jobsList->id,
         ]);
 
-
         dispatch(new CodeSnifferProcessEntity($jobEntity));
         dispatch(new PhpLocProcessEntity($jobEntity));
         dispatch(new TestFrontBackEntity($jobEntity));
