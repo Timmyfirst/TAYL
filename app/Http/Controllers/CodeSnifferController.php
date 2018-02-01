@@ -12,8 +12,6 @@ class CodeSnifferController extends Controller
 {
     public function CreateCodeSnifferLog(){
 
-        /* Get project name */
-//        $proj_name = $this->getProjectName($link);
 
         /*get the date to put it at the end of the log file name*/
         $date =  date('Y_m_d_G-i-s');
@@ -56,11 +54,6 @@ class CodeSnifferController extends Controller
         $logTest->type = 'CodeSniffer';
         $logTest->save();
     }
-
-    /* Make project name */
-//    private function getProjectName($link) {
-//        return $proj_name = substr($link, (strrpos($link, '/', -1) + 1), (strlen($link) - strrpos($link, '/', -1) - 5));
-//    }
 
 
 }
