@@ -3,48 +3,47 @@
 namespace App\Http\Controllers\Queues;
 
 use App\Http\Controllers\Controller;
+use App\JobEntity;
+use App\Jobs\TestFrontBackEntity;
 use App\Jobs\TestProcessEntity;
+use App\JobsList;
+use App\JobStatus;
 use App\User;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Queue;
 
 class StartTestProcessController extends Controller
 {
     public function __construct()
     {
-        // passage d'arguments si besoin
     }
 
     /**
      * @param Request $request
-     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
+     * @return string
      */
     function __invoke(Request $request)
     {
-        $test = ["1","2"];
-        $urlGit = $request->urlGit;
-        $message = '';
-        try {
-            /** function gitClone */
-            $message .= 'git clone success';
+        $jobsList = new JobsList();
+        $jobsList->save();
 
-            /** on lance en queue cette fonction */
-            dispatch(new TestProcessEntity($urlGit));
-            dispatch(new TestProcessEntity($urlGit));
-            dispatch(new TestProcessEntity($urlGit));
-            dispatch(new TestProcessEntity($urlGit));
-            dispatch(new TestProcessEntity($urlGit));
-            dispatch(new TestProcessEntity($urlGit));
+        $jobEntity = new JobEntity();
+        $wip = JobStatus::find(1);
+        $jobEntity->job_status_id = $wip->id;
+        $jobEntity->jobs_list_id = $jobsList->id;
+        $jobEntity->save();
 
-        } catch (ModelNotFoundException $exception) {
-            /** catch en cas d'erreur importante */
-            abort(Response::HTTP_BAD_REQUEST, 'Url does not exist.');
-        }
+        Log::info("launch this job", [
+            'jobentity id' =>  $jobEntity->id,
+            'jobentity JobList id' =>  $jobsList->id,
+        ]);
 
-        /** Message envoyé directement sans attendre la fin des dispatch */
-        $message .= 'An email has been dispatched to userName about a test for this git Project ' . $urlGit;
+        dispatch(new TestFrontBackEntity($jobEntity));
 
-        return response($message, Response::HTTP_OK, ['Content-Type' => 'text/plain']);
+        return "test in process";
+
     }
 }
