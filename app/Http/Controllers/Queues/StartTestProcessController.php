@@ -39,12 +39,11 @@ class StartTestProcessController extends Controller
 
         dispatch(new TestFrontBackEntity($jobEntity));
 
-        return "test in process";
-
-
         return response()->json([
-            'StartTestProcessController' => 'check',
-            'idJobList' => $jobEntity->jobs_list_id
+            'StartTestProcessController' => true,
+            'idJobList' => $jobsList->id
         ]);
+
+
     }
 }

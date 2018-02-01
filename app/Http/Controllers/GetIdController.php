@@ -48,12 +48,8 @@ class GetIdController extends Controller
      */
     public function store(Request $request)
     {
-        return response()->json([
-            'GetIdController' => 'id',
-            'state' => 'CA'
-        ]);
-        $idJobList = $request->idJobList;
 
+        $idJobList = $request->idJobList;
 
 
         $jobsList = new JobsList();
@@ -61,14 +57,22 @@ class GetIdController extends Controller
 
 //        $jobStatus = new JobStatus();
         $jobEntities = DB::table('job_entity')->where('jobs_list_id', $idJobList)->get();
+
 //        $wip = $jobStatus::find(1);
 //        $jobEntity = new JobEntity();
 //        $jobEntity->job_status_id = $wip->id;
 //        $jobEntity->jobs_list_id = $jobsList->id;
 //        $jobsList->entity()->save($jobEntity);
-    dd($jobEntities);
 
-    return json_encode($jobEntities);
+        return response()->json([
+            'GetIdController' => 'id',
+            'state' => $idJobList,
+            'check' => 0,
+            'phplocstatus' => 'En cours de traitement',
+            'codesnifferstatus' =>'En cours de traitement',
+            'joblist' => $jobEntities,
+            'request' => $request
+        ]);
     }
 
     /**
