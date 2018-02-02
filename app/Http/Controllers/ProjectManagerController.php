@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DownloadController extends Controller
+class ProjectManagerController extends Controller
 {
 
   public function store($link)
@@ -26,14 +26,14 @@ class DownloadController extends Controller
       $command = $this->getCmdDownload($link, $proj_name);
 
       /* Execution of command */
-      return shell_exec($command.'2>&1');
+      return shell_exec($command . ' 2>&1');
 
       /* Execution and return */
 
   }
 
   /* Make project name */
-  private function getProjectName($link) {
+  public function getProjectName($link) {
     return $proj_name = substr($link, (strrpos($link, '/', -1) + 1), (strlen($link) - strrpos($link, '/', -1) - 5));
   }
 
@@ -60,6 +60,16 @@ class DownloadController extends Controller
   /* Make count command */
   private function getCmdCount($dir, $proj_name) {
     return $cmd_count = "cd " . substr($dir, 0, strlen($dir)-1) . "/" . $proj_name . " && ls -1 | wc -l";
+  }
+
+  public function destroy($project_name)
+  {
+
+      /* Initialisation delete command */
+      $command = 'cd ' . public_path() . '/storage/project && rm -rf '. $project_name;
+
+      return shell_exec($command . ' 2>&1');
+
   }
 
 }
