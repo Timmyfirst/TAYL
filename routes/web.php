@@ -42,3 +42,5 @@ Route::group(['prefix' => 'queues', 'namespace' => 'Queues'], function() {
 });
 
 Route::get('/getId', 'GetIdController@store');
+
+Route::get('/getJson', 'GetJsonLogController@store');
