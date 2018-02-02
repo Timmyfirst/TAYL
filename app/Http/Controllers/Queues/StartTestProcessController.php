@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Queues;
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\DownloadController;
+use App\Http\Controllers\ProjectManagerController;
 use App\JobEntity;
 use App\Jobs\TestFrontBackEntity;
 use App\Jobs\CodeSnifferProcessEntity;
@@ -31,8 +31,8 @@ class StartTestProcessController extends Controller
     function __invoke(Request $request)
     {
 //        $urlGit = $request->urlGit;
-//        $downloadGit = new DownloadController();
-//        $downloadGit->store($urlGit);
+//        $GitManager = new ProjectManagerController();
+//        $GitManager->store($urlGit);
 
         $jobsList = new JobsList();
         $jobsList->save();
@@ -49,7 +49,9 @@ class StartTestProcessController extends Controller
         dispatch(new PhpLocProcessEntity($jobEntity));
         dispatch(new TestFrontBackEntity($jobEntity));
 
-        return "test in process";
+        $GitManager->destroy($GitManager->getProjectName($urlGit));
+
+        return "Project tested";
 
     }
 }
