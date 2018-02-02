@@ -19,21 +19,15 @@ Route::get('/check/{link}','ApiEntryController@store');
 
 Route::get('/download/{link}','DownloadController@store');
 
-
 Route::get('/sniff', 'CodeSnifferController@CreateCodeSnifferLog');
-
 
 Route::get('/PhpLoc', 'PhpLocController@CreatePhpLocLog');
 
-
-
 Route::get('/donationPayPal', 'donationPayPalController@donationPayPalRender');
-
 
 Route::get('/donationBitCoin', 'donationBitCoinController@donationPayPalRender');
 
-
-
+Route::get('/mail/{address}/test/{test}/projet/{projet}/filename/{filename}', 'SendMailController@sendMail');
 
 Route::group(['prefix' => 'queues', 'namespace' => 'Queues'], function() {
     Route::get('startTestProcess', 'StartTestProcessController')

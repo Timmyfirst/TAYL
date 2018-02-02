@@ -7,7 +7,6 @@
     <style>
       .main {
         width: 580px;
-
       }
       .header {
 
@@ -18,7 +17,7 @@
         border-style: solid;
         border-radius: 6px;
         background: radial-gradient(ellipse at center, rgba(107,109,118,1) 10%, rgba(51,78,88,1) 100%);
-        color: #fffaea;
+        color: #fffaea !important;
       }
       .footer {
         text-align: center;
@@ -49,7 +48,7 @@
           <tr>
             <td class="content">
               <p>Bonjour,</p><br>
-              <p>Vous recevez ce mail suite à votre demande de test <span id="Test">Test</span> du <span id="Date">01/01/2018</span> sur votre projet <span id="Projet">Projet</span>, vous trouverez les résultats en pièce jointe.</p><br>
+              <p>Vous recevez ce mail suite à votre demande de test <span id="Test">{{ $Test }}</span> du <span id="Date">{{ $Date }}</span> sur votre projet <span id="Projet">{{ $Projet }}</span>, vous trouverez les résultats en pièce jointe.</p><br>
               <p>A bientôt sur notre application,</p><br>
               <p>Cordialement.<br>L'équipe TAYL.</p>
             </td>
