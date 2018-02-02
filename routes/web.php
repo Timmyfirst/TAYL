@@ -32,9 +32,8 @@ Route::get('/mail/{address}/test/{test}/projet/{projet}/filename/{filename}', 'S
 Route::group(['prefix' => 'queues', 'namespace' => 'Queues'], function() {
     Route::get('startTestProcess', 'StartTestProcessController')
          ->name('queues.startTestProcess');
-
 });
 
-Route::get('/getId', 'GetIdController@store');
+Route::get('/getStatus', 'GetJobStatusController@store');
 
 Route::get('/getJson', 'GetJsonLogController@store');

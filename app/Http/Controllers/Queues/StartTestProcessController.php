@@ -30,9 +30,9 @@ class StartTestProcessController extends Controller
      */
     function __invoke(Request $request)
     {
-//        $urlGit = $request->urlGit;
-//        $GitManager = new ProjectManagerController();
-//        $GitManager->store($urlGit);
+        $urlGit = $request->urlGit;
+        $GitManager = new ProjectManagerController();
+        $GitManager->store($urlGit);
 
         $jobsList = new JobsList();
         $jobsList->save();
@@ -51,7 +51,16 @@ class StartTestProcessController extends Controller
 
         $GitManager->destroy($GitManager->getProjectName($urlGit));
 
-        return "Project tested";
+        return response()->json([
+            'GetIdController' => 'id',
+            'state' => 1,
+            'check' => 0,
+            'phplocstatus' => 'En cours de traitement',
+            'codesnifferstatus' =>'En cours de traitement',
+            'joblist' => 1,
+            'request' => 1,
+            'idJobList' => $jobsList->id
+        ]);
 
     }
 }
