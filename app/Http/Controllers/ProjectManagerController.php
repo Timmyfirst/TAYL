@@ -62,11 +62,13 @@ class ProjectManagerController extends Controller
     return $cmd_count = "cd " . substr($dir, 0, strlen($dir)-1) . "/" . $proj_name . " && ls -1 | wc -l";
   }
 
-  public function destroy($project_name)
+  public function destroy($link)
   {
+      /* Get project name */
+      $proj_name = $this->getProjectName($link);
 
       /* Initialisation delete command */
-      $command = 'cd ' . public_path() . '/storage/project && rm -rf '. $project_name;
+      $command = 'cd ' . public_path() . '/storage/project && rm -rf '. $proj_name;
 
       return shell_exec($command . ' 2>&1');
 

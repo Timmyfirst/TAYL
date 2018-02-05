@@ -1,13 +1,12 @@
 <?php
-
 namespace App\Http\Controllers\Queues;
-
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProjectManagerController;
 use App\JobEntity;
 use App\Jobs\TestFrontBackEntity;
 use App\Jobs\CodeSnifferProcessEntity;
 use App\Jobs\PhpLocProcessEntity;
+use App\Jobs\ParalleleLintProcessEntity;
 use App\Jobs\TestProcessEntity;
 use App\JobsList;
 use App\JobStatus;
@@ -38,18 +37,14 @@ class StartTestProcessController extends Controller
         $jobsList->save();
 
         $jobEntity = createJobEntity($jobsList->id);
-
-
         Log::info("launch this job", [
             'jobentity id' =>  $jobEntity->id,
             'jobentity JobList id' =>  $jobsList->id,
         ]);
-
-        dispatch(new CodeSnifferProcessEntity($jobEntity));
-        dispatch(new PhpLocProcessEntity($jobEntity));
-        dispatch(new TestFrontBackEntity($jobEntity));
-
-        $GitManager->destroy($GitManager->getProjectName($urlGit));
+        dispatch(new CodeSnifferProcessEntity($jobEntity,$urlGit));
+        dispatch(new PhpLocProcessEntity($jobEntity,$urlGit));
+        dispatch(new ParalleleLintProcessEntity($jobEntity,$urlGit));
+//        dispatch(new TestFrontBackEntity($jobEntity));
 
         return response()->json([
             'GetIdController' => 'id',
@@ -61,6 +56,5 @@ class StartTestProcessController extends Controller
             'request' => 1,
             'idJobList' => $jobsList->id
         ]);
-
     }
 }
