@@ -67,9 +67,6 @@ class GetIdController extends Controller
         return response()->json([
             'GetIdController' => 'id',
             'state' => $idJobList,
-            'check' => 0,
-            'phplocstatus' => 'En cours de traitement',
-            'codesnifferstatus' =>'En cours de traitement',
             'joblist' => $jobEntities,
             'request' => $request
         ]);

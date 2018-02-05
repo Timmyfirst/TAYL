@@ -65,14 +65,14 @@ class GetJobStatusController extends Controller
 //        $jobEntity->job_status_id = $wip->id;
 //        $jobEntity->jobs_list_id = $jobsList->id;
 //        $jobsList->entity()->save($jobEntity);
-        $status = DB::table('job_status')->select('name')->where('id', $jobEntities[0]->job_status_id)->first();
+        $status = DB::table('job_status')->select('name', 'id')->where('id', $jobEntities[0]->job_status_id)->first();
 
         return response()->json([
-            'state' => $jobEntities[0]->job_status_id,
+            'state' => $status->id,
             'phplocstatus' => $status->name,
             'codesnifferstatus' => $status->name,
             'joblist' => $jobEntities,
-            'request' => $request
+            'request' => $status
         ]);
     }
 
