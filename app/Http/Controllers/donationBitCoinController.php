@@ -20,7 +20,10 @@ class donationBitCoinController extends Controller
 
     public function donationPayPalRender(){
 
-        return  View::make('donation/donationBitCoin', array('addressBitCoin' => $this->addressBitCoin, 'urlQrCode' => $this->urlQrCode));
+        return response()->json([
+            'addressBitCoin' => $this->addressBitCoin,
+            'urlQrCode' => $this->urlQrCode
+        ]);
     }
 
 
