@@ -5,7 +5,7 @@ namespace App\Jobs;
 use App\JobEntity;
 use App\JobsList;
 use App\JobStatus;
-use App\Http\Controllers\PhpLocController;
+use App\Http\Controllers\ParallelLintController;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
@@ -13,7 +13,8 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Support\Facades\Log;
 
-class PhpLocProcessEntity implements ShouldQueue
+
+class ParalleleLintProcessEntity implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -38,6 +39,10 @@ class PhpLocProcessEntity implements ShouldQueue
      */
     public function handle()
     {
+        /** on a eu pour ordre de lancer cette fonction */
+        /** stop 10sec */
+
+
 
         $wip = JobStatus::find(2);
 
@@ -45,8 +50,9 @@ class PhpLocProcessEntity implements ShouldQueue
             'jobentity id' => $this->jobEntity->id,
             'jobentity status' => $wip->id,
         ]);
-        $phpLoc = new PhpLocController();
-        $phpLoc->createPhpLocLog($this->urlGit);
+
+        $ParallelLint = new ParallelLintController();
+        $ParallelLint->createParallelLintLog($this->urlGit);
 
         $JobEntity = JobEntity::find($this->jobEntity->id);
         $JobEntity->job_status_id = $wip->id;
@@ -56,8 +62,6 @@ class PhpLocProcessEntity implements ShouldQueue
             'jobentity id' => $JobEntity->id,
             'jobentity status' => $JobEntity->job_status_id,
         ]);
-
-
 
     }
 

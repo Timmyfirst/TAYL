@@ -7,34 +7,23 @@ use Storage;
 use App\LogTest;
 use Illuminate\Support\Facades\DB;
 
-
-class PhpLocController extends Controller
+class ParallelLintController extends Controller
 {
-    public function createPhpLocLog($urlGit){
+    public function createParallelLintLog($urlGit){
 
         $projectName =  $this->getProjectName($urlGit);
         /*get the date to put it at the end of the log file name*/
         $date =  date('Y_m_d_G-i-s');
-        $nameLogFile= $projectName.'_logPhpLoc'.$date;
+        $nameLogFile= $projectName.'_logParallelLint'.$date;
         $pathStorage = public_path() . "/storage/";
         $pathFinalLog= $pathStorage.'/logProject/'.$projectName.'_FinalLog.json';
 
-        /*execute a command to execute "phploc" and send the result to a log file*/
-        shell_exec( 'cd '.$pathStorage .' && phploc project > logProject/'.$nameLogFile.'.txt');
-        shell_exec( 'cd '.$pathStorage .' && phploc project --log-xml logProject/'.$nameLogFile.'.xml');
+        /*execute a command to execute "code sniffer" and send the result to a log file*/
+        shell_exec( 'cd '.$pathStorage .' && parallel-lint  project > logProject/'.$nameLogFile.'.txt');
+        shell_exec( 'cd '.$pathStorage .' && parallel-lint  project --json > logProject/'.$nameLogFile.'.json');
 
 
-        /*create file Xml*/
-        $logXml = simplexml_load_file($pathStorage.'logProject/'.$nameLogFile.'.xml');
-
-        /*convert file xml in json*/
-        $jsonTab = json_encode($logXml);
-
-        /*write in file json*/
-        file_put_contents($pathStorage.'/logProject/'.$nameLogFile.'.json', '"phpLoc":' . $jsonTab . '');
-
-
-        /*recup logPhpLoc*/
+        /*recup logSniff*/
         $json_source = file_get_contents($pathStorage.'/logProject/'.$nameLogFile.'.json');
 
         /*check if FinalLogJson exists */
@@ -47,18 +36,17 @@ class PhpLocController extends Controller
             file_put_contents($pathFinalLog, '');
             $recupJsonFileFinal = '';
         }
+
         /*delete first and last caratere*/
         $recupJsonFileFinal = substr($recupJsonFileFinal,1,-1);
         /*check if FinalLogJson is empty and concat FinalLogJson and logPhpLoc  */
         if(!empty($recupJsonFileFinal)){
-                $jsonFileFinal= '{'.$recupJsonFileFinal.','.$json_source.'}';
-            }else{
-                $jsonFileFinal= '{'.$json_source.'}';
-            }
+            $JsonFileFinal= '{'.$recupJsonFileFinal.',"codeSniff":'.$json_source.'}';
+        }else{
+            $JsonFileFinal= '{"paralleleLint":'.$json_source.'}';
+        }
         /*write in FinalLogJson*/
-        file_put_contents($pathFinalLog, $jsonFileFinal);
-
-
+        file_put_contents($pathFinalLog, $JsonFileFinal);
 
         $this->insertDB($nameLogFile);
     }
@@ -66,11 +54,12 @@ class PhpLocController extends Controller
         /*Insert in log table */
         $logTest = new LogTest;
         $logTest->path = '/logProject/'.$nameLogFile;
-        $logTest->type = 'PhpLoc';
+        $logTest->type = 'ParalleleLint';
         $logTest->save();
     }
     /* Make project name */
     public function getProjectName($link) {
         return $proj_name = substr($link, (strrpos($link, '/', -1) + 1), (strlen($link) - strrpos($link, '/', -1) - 5));
     }
+
 }

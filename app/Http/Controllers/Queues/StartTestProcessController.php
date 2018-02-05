@@ -1,13 +1,12 @@
 <?php
-
 namespace App\Http\Controllers\Queues;
-
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProjectManagerController;
 use App\JobEntity;
 use App\Jobs\TestFrontBackEntity;
 use App\Jobs\CodeSnifferProcessEntity;
 use App\Jobs\PhpLocProcessEntity;
+use App\Jobs\ParalleleLintProcessEntity;
 use App\Jobs\TestProcessEntity;
 use App\JobsList;
 use App\JobStatus;
@@ -17,41 +16,37 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Queue;
-
 class StartTestProcessController extends Controller
 {
     public function __construct()
     {
     }
-
     /**
      * @param Request $request
      * @return string
      */
     function __invoke(Request $request)
     {
-//        $urlGit = $request->urlGit;
-//        $GitManager = new ProjectManagerController();
-//        $GitManager->store($urlGit);
+        $urlGit = $request->urlGit;
+        $GitManager = new ProjectManagerController();
+        $GitManager->store($urlGit);
 
         $jobsList = new JobsList();
         $jobsList->save();
-
-        $jobEntity = createJobEntity($jobsList->id);
-
-
+        $jobEntity = new JobEntity();
+        $wip = JobStatus::find(1);
+        $jobEntity->job_status_id = $wip->id;
+        $jobEntity->jobs_list_id = $jobsList->id;
+        $jobEntity->save();
         Log::info("launch this job", [
             'jobentity id' =>  $jobEntity->id,
             'jobentity JobList id' =>  $jobsList->id,
         ]);
+        dispatch(new CodeSnifferProcessEntity($jobEntity,$urlGit));
+        dispatch(new PhpLocProcessEntity($jobEntity,$urlGit));
+        dispatch(new ParalleleLintProcessEntity($jobEntity,$urlGit));
+//        dispatch(new TestFrontBackEntity($jobEntity));
 
-        dispatch(new CodeSnifferProcessEntity($jobEntity));
-        dispatch(new PhpLocProcessEntity($jobEntity));
-        dispatch(new TestFrontBackEntity($jobEntity));
-
-        $GitManager->destroy($GitManager->getProjectName($urlGit));
-
-        return "Project tested";
-
+        return "test in process";
     }
 }
