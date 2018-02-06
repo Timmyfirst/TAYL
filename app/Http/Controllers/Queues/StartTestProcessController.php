@@ -41,19 +41,25 @@ class StartTestProcessController extends Controller
             'jobentity id' =>  $jobEntity->id,
             'jobentity JobList id' =>  $jobsList->id,
         ]);
-        dispatch(new CodeSnifferProcessEntity($jobEntity,$urlGit));
-        dispatch(new PhpLocProcessEntity($jobEntity,$urlGit));
-        dispatch(new ParalleleLintProcessEntity($jobEntity,$urlGit));
+
+        if($request->codesniffer == 1) {
+            dispatch(new CodeSnifferProcessEntity($jobEntity, $urlGit));
+        } else {
+            dispatch(new CodeSnifferProcessEntity($jobEntity, $urlGit));
+        }
+        if($request->phploc == 1) {
+            dispatch(new PhpLocProcessEntity($jobEntity, $urlGit));
+        } else {
+            dispatch(new PhpLocProcessEntity($jobEntity, $urlGit));
+        }
+        if($request->parallellint == 1) {
+            dispatch(new ParalleleLintProcessEntity($jobEntity, $urlGit));
+        } else {
+            dispatch(new ParalleleLintProcessEntity($jobEntity, $urlGit));
+        }
 //        dispatch(new TestFrontBackEntity($jobEntity));
 
         return response()->json([
-            'GetIdController' => 'id',
-            'state' => 1,
-            'check' => 0,
-            'phplocstatus' => 'En cours de traitement',
-            'codesnifferstatus' =>'En cours de traitement',
-            'joblist' => 1,
-            'request' => 1,
             'idJobList' => $jobsList->id
         ]);
     }

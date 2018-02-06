@@ -15,7 +15,7 @@ class donationBitCoinController extends Controller
      */
 
     private $addressBitCoin = '1J9NHCGjuZnQcyHN35zZEagJ8Q2Nzjoyno';
-    private $urlQrCode = 'https://blockchain.info/fr/qr?data=1J9NHCGjuZnQcyHN35zZEagJ8Q2Nzjoyno&size=200';
+    private $urlQrCode = 'https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=1J9NHCGjuZnQcyHN35zZEagJ8Q2Nzjoyno&choe=UTF-8';
 
 
     public function donationPayPalRender(){
