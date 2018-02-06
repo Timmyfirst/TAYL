@@ -16,13 +16,11 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Queue;
-
 class StartTestProcessController extends Controller
 {
     public function __construct()
     {
     }
-
     /**
      * @param Request $request
      * @return string
@@ -59,8 +57,12 @@ class StartTestProcessController extends Controller
         }
 //        dispatch(new TestFrontBackEntity($jobEntity));
 
+
+        //$GitManager->destroy($GitManager->getProjectName($urlGit));
+
         return response()->json([
             'idJobList' => $jobsList->id
         ]);
+
     }
 }
