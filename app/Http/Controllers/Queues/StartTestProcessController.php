@@ -44,6 +44,19 @@ class StartTestProcessController extends Controller
         dispatch(new ParalleleLintProcessEntity($jobEntity,$urlGit));
 //        dispatch(new TestFrontBackEntity($jobEntity));
 
-        return "test in process";
+
+        //$GitManager->destroy($GitManager->getProjectName($urlGit));
+
+        return response()->json([
+            'GetIdController' => 'id',
+            'state' => 1,
+            'check' => 0,
+            'phplocstatus' => 'En cours de traitement',
+            'codesnifferstatus' =>'En cours de traitement',
+            'joblist' => 1,
+            'request' => 1,
+            'idJobList' => $jobsList->id
+        ]);
+
     }
 }
