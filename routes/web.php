@@ -31,6 +31,7 @@ Route::get('/donationBitCoin', 'donationBitCoinController@donationPayPalRender')
 
 Route::get('/donationEther', 'DonationEtherController@donationEtherRender');
 
+
 Route::get('/mail/{address}/test/{test}/projet/{projet}/filename/{filename}', 'SendMailController@sendMail');
 
 Route::group(['prefix' => 'queues', 'namespace' => 'Queues'], function() {
