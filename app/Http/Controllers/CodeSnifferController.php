@@ -10,13 +10,15 @@ use Illuminate\Support\Facades\DB;
 
 class CodeSnifferController extends Controller
 {
-    public function CreateCodeSnifferLog(){
 
+    public function createCodeSnifferLog($urlGit){
 
+        $projectName =  $this->getProjectName($urlGit);
         /*get the date to put it at the end of the log file name*/
         $date =  date('Y_m_d_G-i-s');
-        $nameLogFile= 'logSniff'.$date;
+        $nameLogFile= $projectName.'_logSniff'.$date;
         $pathStorage = public_path() . "/storage/";
+        $pathFinalLog= $pathStorage.'/logProject/'.$projectName.'_FinalLog.json';
 
         /*execute a command to execute "code sniffer" and send the result to a log file*/
         shell_exec( 'cd '.$pathStorage .' && phpcs project > logProject/'.$nameLogFile.'.txt');
@@ -27,13 +29,13 @@ class CodeSnifferController extends Controller
         $json_source = file_get_contents($pathStorage.'/logProject/'.$nameLogFile.'.json');
 
         /*check if FinalLogJson exists */
-        $finalLogJsonExist=  file_exists($pathStorage.'/logProject/FinalLogJson.json');
+        $finalLogJsonExist=  file_exists($pathFinalLog);
         if($finalLogJsonExist){
             /*recup FinalLogJson*/
-            $recupJsonFileFinal = file_get_contents($pathStorage.'/logProject/FinalLogJson.json');
+            $recupJsonFileFinal = file_get_contents($pathFinalLog);
         }else{
             /*create FinalLogJson*/
-            file_put_contents($pathStorage.'/logProject/FinalLogJson.json', '');
+            file_put_contents($pathFinalLog, '');
             $recupJsonFileFinal = '';
         }
 
@@ -46,8 +48,11 @@ class CodeSnifferController extends Controller
             $JsonFileFinal= '{"codeSniff":'.$json_source.'}';
         }
         /*write in FinalLogJson*/
-        file_put_contents($pathStorage.'/logProject/FinalLogJson.json', $JsonFileFinal);
+        file_put_contents($pathFinalLog, $JsonFileFinal);
 
+        $this->insertDB($nameLogFile);
+    }
+    public function insertDB($nameLogFile){
         /*Insert in log table */
         $logTest = new LogTest;
         $logTest->path = '/logProject/'.$nameLogFile;
@@ -55,5 +60,9 @@ class CodeSnifferController extends Controller
         $logTest->save();
     }
 
+    /* Make project name */
+    public function getProjectName($link) {
+        return $proj_name = substr($link, (strrpos($link, '/', -1) + 1), (strlen($link) - strrpos($link, '/', -1) - 5));
+    }
 
 }

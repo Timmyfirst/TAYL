@@ -19,16 +19,18 @@ class CodeSnifferProcessEntity implements ShouldQueue
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     protected $jobEntity;
+    protected $urlGit;
 
     /**
      * Create a new job instance.
      *
      * @param JobEntity $jobEntity
      */
-    public function __construct(JobEntity $jobEntity)
+    public function __construct(JobEntity $jobEntity,$urlGit)
     {
         /** ajouter un paramètre */
         $this->jobEntity = $jobEntity;
+        $this->urlGit = $urlGit;
     }
     /**
      * Execute the job.
@@ -40,8 +42,7 @@ class CodeSnifferProcessEntity implements ShouldQueue
         /** on a eu pour ordre de lancer cette fonction */
         /** stop 10sec */
 
-        $CodeSniffer = new CodeSnifferController();
-        $CodeSniffer->CreateCodeSnifferLog();
+
 
         $wip = JobStatus::find(2);
 
@@ -49,6 +50,9 @@ class CodeSnifferProcessEntity implements ShouldQueue
             'jobentity id' => $this->jobEntity->id,
             'jobentity status' => $wip->id,
         ]);
+
+        $CodeSniffer = new CodeSnifferController();
+        $CodeSniffer->createCodeSnifferLog($this->urlGit);
 
         $JobEntity = JobEntity::find($this->jobEntity->id);
         $JobEntity->job_status_id = $wip->id;
