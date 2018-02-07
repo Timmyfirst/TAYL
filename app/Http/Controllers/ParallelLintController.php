@@ -41,7 +41,7 @@ class ParallelLintController extends Controller
         $recupJsonFileFinal = substr($recupJsonFileFinal,1,-1);
         /*check if FinalLogJson is empty and concat FinalLogJson and logPhpLoc  */
         if(!empty($recupJsonFileFinal)){
-            $JsonFileFinal= '{'.$recupJsonFileFinal.',"codeSniff":'.$json_source.'}';
+            $JsonFileFinal= '{'.$recupJsonFileFinal.',"paralleleLint":'.$json_source.'}';
         }else{
             $JsonFileFinal= '{"paralleleLint":'.$json_source.'}';
         }

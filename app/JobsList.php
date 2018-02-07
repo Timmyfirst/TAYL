@@ -15,7 +15,7 @@ class JobsList extends Model
      * @var array
      */
     protected $fillable = [
-        'id'
+        'id','job_count'
     ];
 
 

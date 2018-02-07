@@ -30,36 +30,67 @@ class StartTestProcessController extends Controller
         $urlGit = $request->urlGit;
         $GitManager = new ProjectManagerController();
         $GitManager->store($urlGit);
+        $countTest= 0;
+
+        if($request->codesniffer == 1) {
+            $countTest++;
+        }
+        if($request->phploc == 1) {
+            $countTest++;
+        }
+        if($request->parallelelint == 1) {
+            $countTest++;
+        }
 
         $jobsList = new JobsList();
+        $jobsList->job_count=$countTest;
         $jobsList->save();
-
         $jobEntity = createJobEntity($jobsList->id);
         Log::info("launch this job", [
             'jobentity id' =>  $jobEntity->id,
             'jobentity JobList id' =>  $jobsList->id,
         ]);
 
+
         if($request->codesniffer == 1) {
+            sleep(2);
             dispatch(new CodeSnifferProcessEntity($jobEntity, $urlGit));
+
         } else {
             dispatch(new CodeSnifferProcessEntity($jobEntity, $urlGit));
         }
         if($request->phploc == 1) {
+            sleep(2);
             dispatch(new PhpLocProcessEntity($jobEntity, $urlGit));
+
         } else {
             dispatch(new PhpLocProcessEntity($jobEntity, $urlGit));
         }
         if($request->parallellint == 1) {
-            dispatch(new ParalleleLintProcessEntity($jobEntity, $urlGit));
+            sleep(2);
+            dispatch(new ParallelLintProcessEntity($jobEntity, $urlGit));
+
         } else {
-            dispatch(new ParalleleLintProcessEntity($jobEntity, $urlGit));
+            dispatch(new ParallelLintProcessEntity($jobEntity, $urlGit));
         }
+
+
+        do{
+            $jobList = new JobsList();
+            $jobList = $jobList::find($jobsList->id);
+            //dd($jobList->job_count);
+            echo $jobList->job_count;
+            if($jobList->job_count == 0){
+                echo 'destroy';
+                $GitManager->destroy($urlGit);
+            }
+        }while($jobList->job_count >0);
+
+
 //        dispatch(new TestFrontBackEntity($jobEntity));
 
 
         //$GitManager->destroy($GitManager->getProjectName($urlGit));
-
         return response()->json([
             'idJobList' => $jobsList->id
         ]);
