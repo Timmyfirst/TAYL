@@ -15,6 +15,7 @@ class JobsListTable extends Migration
     {
         Schema::create('jobs_list', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('job_count');
             $table->timestamps();
         });
     }

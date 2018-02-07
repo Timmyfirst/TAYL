@@ -63,6 +63,17 @@ class ParalleleLintProcessEntity implements ShouldQueue
             'jobentity status' => $JobEntity->job_status_id,
         ]);
 
+        $jobListId = $this->jobEntity->jobs_list_id;
+        $jobList = new JobsList();
+        $jobList = $jobList::find($jobListId);
+        $jobCount = $jobList->job_count;
+        $jobCount = $jobCount - 1;
+        $jobList->job_count = $jobCount;
+        $jobList->save();
+        Log::info("ParalleleLint Process Entity", [
+            '$jobList' => $jobList,
+        ]);
+
     }
 
     public function failed()
