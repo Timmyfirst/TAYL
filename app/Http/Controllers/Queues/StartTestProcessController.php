@@ -66,12 +66,12 @@ class StartTestProcessController extends Controller
         } else {
             dispatch(new PhpLocProcessEntity($jobEntity, $urlGit));
         }
-        if($request->parallelelint == 1) {
+        if($request->parallellint == 1) {
             sleep(2);
-            dispatch(new ParalleleLintProcessEntity($jobEntity, $urlGit));
+            dispatch(new ParallelLintProcessEntity($jobEntity, $urlGit));
 
         } else {
-            dispatch(new ParalleleLintProcessEntity($jobEntity, $urlGit));
+            dispatch(new ParallelLintProcessEntity($jobEntity, $urlGit));
         }
 
 
