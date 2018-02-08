@@ -52,7 +52,7 @@ class CodeSnifferProcessEntity implements ShouldQueue
         ]);
 
         $CodeSniffer = new CodeSnifferController();
-        $CodeSniffer->createCodeSnifferLog($this->urlGit);
+        $CodeSniffer->createCodeSnifferLog($this->urlGit,$this->jobEntity->jobs_list_id);
 
         $JobEntity = JobEntity::find($this->jobEntity->id);
         $JobEntity->job_status_id = $wip->id;

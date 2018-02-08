@@ -11,14 +11,14 @@ use Illuminate\Support\Facades\DB;
 class CodeSnifferController extends Controller
 {
 
-    public function createCodeSnifferLog($urlGit){
+    public function createCodeSnifferLog($urlGit,$jobsListId){
 
         $projectName =  $this->getProjectName($urlGit);
         /*get the date to put it at the end of the log file name*/
         $date =  date('Y_m_d_G-i-s');
-        $nameLogFile= $projectName.'_logSniff'.$date;
+        $nameLogFile= $projectName.'_logSniff'.$jobsListId;
         $pathStorage = public_path() . "/storage/";
-        $pathFinalLog= $pathStorage.'/logProject/'.$projectName.'_FinalLog.json';
+        $pathFinalLog= $pathStorage.'/logProject/'.$projectName.'_FinalLog'.$jobsListId.'.json';
 
         /*execute a command to execute "code sniffer" and send the result to a log file*/
         shell_exec( 'cd '.$pathStorage .' && phpcs project > logProject/'.$nameLogFile.'.txt');

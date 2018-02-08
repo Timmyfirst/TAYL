@@ -10,14 +10,14 @@ use Illuminate\Support\Facades\DB;
 
 class PhpLocController extends Controller
 {
-    public function createPhpLocLog($urlGit){
+    public function createPhpLocLog($urlGit,$jobsListId){
 
         $projectName =  $this->getProjectName($urlGit);
         /*get the date to put it at the end of the log file name*/
         $date =  date('Y_m_d_G-i-s');
-        $nameLogFile= $projectName.'_logPhpLoc'.$date;
+        $nameLogFile= $projectName.'_logPhpLoc'.$jobsListId;
         $pathStorage = public_path() . "/storage/";
-        $pathFinalLog= $pathStorage.'/logProject/'.$projectName.'_FinalLog.json';
+        $pathFinalLog= $pathStorage.'/logProject/'.$projectName.'_FinalLog'.$jobsListId.'.json';
 
         /*execute a command to execute "phploc" and send the result to a log file*/
         shell_exec( 'cd '.$pathStorage .' && phploc project > logProject/'.$nameLogFile.'.txt');

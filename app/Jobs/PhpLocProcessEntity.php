@@ -46,7 +46,7 @@ class PhpLocProcessEntity implements ShouldQueue
             'jobentity status' => $wip->id,
         ]);
         $phpLoc = new PhpLocController();
-        $phpLoc->createPhpLocLog($this->urlGit);
+        $phpLoc->createPhpLocLog($this->urlGit,$this->jobEntity->jobs_list_id);
 
         $JobEntity = JobEntity::find($this->jobEntity->id);
         $JobEntity->job_status_id = $wip->id;
