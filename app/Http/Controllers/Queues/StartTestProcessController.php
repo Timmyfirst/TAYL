@@ -54,24 +54,24 @@ class StartTestProcessController extends Controller
 
         if($request->codesniffer == 1) {
             sleep(2);
-            dispatch(new CodeSnifferProcessEntity($jobEntity, $urlGit));
+            dispatch(new CodeSnifferProcessEntity($jobEntity, $urlGit,$request->mailUser));
 
         } else {
-            dispatch(new CodeSnifferProcessEntity($jobEntity, $urlGit));
+            dispatch(new CodeSnifferProcessEntity($jobEntity, $urlGit,$request->mailUser));
         }
         if($request->phploc == 1) {
             sleep(2);
-            dispatch(new PhpLocProcessEntity($jobEntity, $urlGit));
+            dispatch(new PhpLocProcessEntity($jobEntity, $urlGit,$request->mailUser));
 
         } else {
-            dispatch(new PhpLocProcessEntity($jobEntity, $urlGit));
+            dispatch(new PhpLocProcessEntity($jobEntity, $urlGit,$request->mailUser));
         }
         if($request->parallellint == 1) {
             sleep(2);
-            dispatch(new ParallelLintProcessEntity($jobEntity, $urlGit));
+            dispatch(new ParallelLintProcessEntity($jobEntity, $urlGit,$request->mailUser));
 
         } else {
-            dispatch(new ParallelLintProcessEntity($jobEntity, $urlGit));
+            dispatch(new ParallelLintProcessEntity($jobEntity, $urlGit,$request->mailUser));
         }
 
 

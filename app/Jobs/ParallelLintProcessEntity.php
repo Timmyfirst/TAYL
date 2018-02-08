@@ -5,6 +5,8 @@ namespace App\Jobs;
 use App\JobEntity;
 use App\JobsList;
 use App\JobStatus;
+use App\Http\Controllers\SendMailController;
+use App\Http\Controllers\ProjectManagerController;
 use App\Http\Controllers\ParallelLintController;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
@@ -20,17 +22,23 @@ class ParallelLintProcessEntity implements ShouldQueue
 
     protected $jobEntity;
     protected $urlGit;
+    protected $addressMail;
+    protected $projectName;
+
 
     /**
      * Create a new job instance.
      *
      * @param JobEntity $jobEntity
      */
-    public function __construct(JobEntity $jobEntity,$urlGit)
+    public function __construct(JobEntity $jobEntity,$urlGit,$address)
     {
+        $gitManager=new ProjectManagerController();
         /** ajouter un paramètre */
         $this->jobEntity = $jobEntity;
         $this->urlGit = $urlGit;
+        $this->addressMail = $address;
+        $this->projectName = $gitManager->getProjectName($urlGit);
     }
     /**
      * Execute the job.
@@ -70,9 +78,15 @@ class ParallelLintProcessEntity implements ShouldQueue
         $jobCount = $jobCount - 1;
         $jobList->job_count = $jobCount;
         $jobList->save();
-        Log::info("ParalleleLint Process Entity", [
+        Log::info("ParallelLint Process Entity", [
             '$jobList' => $jobList,
         ]);
+
+        /**Send mail**/
+        $fileLog= $this->projectName.'_logParallelLint'.$this->jobEntity->jobs_list_id;
+
+        $mail = new SendMailController();
+        $mail->SendMail($this->addressMail,'Parallel Lint',$this->projectName,$fileLog);
 
     }
 

@@ -37,9 +37,6 @@ class TestFinishedSendMail extends Mailable
     public function build()
     {
       return $this->view('emails.email')
-                  ->attach(public_path() . "/storage/", [
-                        'as' => $this->FileName.'.txt',
-                        'mime' => 'application/text',
-                    ]);
+                  ->attach(public_path() . "/storage/logProject/".$this->FileName.".txt");
     }
 }
