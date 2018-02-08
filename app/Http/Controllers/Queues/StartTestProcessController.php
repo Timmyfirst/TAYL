@@ -47,7 +47,7 @@ class StartTestProcessController extends Controller
 //        $GitManager = new ProjectManagerController();
 //        $GitManager->store($urlGit,$jobEntity);
         ProjectDownload::withChain([
-                new CodeSnifferProcessEntity($jobEntity,$request->mailUser, $urlGit)
+                new CodeSnifferProcessEntity($jobEntity, $urlGit,$request->mailUser)
         ])->dispatch($urlGit, $jobEntity,$urlGit);
 
 //        dispatch(new ProjectDownload($urlGit, $jobEntity,$urlGit));
