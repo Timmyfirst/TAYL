@@ -30,7 +30,6 @@ class SendMailController extends Controller
 
     Mail::to($receiverAddress)->send(new TestFinishedSendMail($this->Test, $this->Projet, $this->FileName));
 
-    dd('mail send successfully');
   }
 
 

@@ -5,6 +5,8 @@ namespace App\Jobs;
 use App\JobEntity;
 use App\JobsList;
 use App\JobStatus;
+use App\Http\Controllers\SendMailController;
+use App\Http\Controllers\ProjectManagerController;
 use App\Http\Controllers\ParallelLintController;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
@@ -14,23 +16,29 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Support\Facades\Log;
 
 
-class ParalleleLintProcessEntity implements ShouldQueue
+class ParallelLintProcessEntity implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     protected $jobEntity;
     protected $urlGit;
+    protected $addressMail;
+    protected $projectName;
+
 
     /**
      * Create a new job instance.
      *
      * @param JobEntity $jobEntity
      */
-    public function __construct(JobEntity $jobEntity,$urlGit)
+    public function __construct(JobEntity $jobEntity,$urlGit,$address)
     {
+        $gitManager=new ProjectManagerController();
         /** ajouter un paramètre */
         $this->jobEntity = $jobEntity;
         $this->urlGit = $urlGit;
+        $this->addressMail = $address;
+        $this->projectName = $gitManager->getProjectName($urlGit);
     }
     /**
      * Execute the job.
@@ -52,7 +60,7 @@ class ParalleleLintProcessEntity implements ShouldQueue
         ]);
 
         $ParallelLint = new ParallelLintController();
-        $ParallelLint->createParallelLintLog($this->urlGit);
+        $ParallelLint->createParallelLintLog($this->urlGit,$this->jobEntity->jobs_list_id);
 
         $JobEntity = JobEntity::find($this->jobEntity->id);
         $JobEntity->job_status_id = $wip->id;
@@ -62,6 +70,23 @@ class ParalleleLintProcessEntity implements ShouldQueue
             'jobentity id' => $JobEntity->id,
             'jobentity status' => $JobEntity->job_status_id,
         ]);
+
+        $jobListId = $this->jobEntity->jobs_list_id;
+        $jobList = new JobsList();
+        $jobList = $jobList::find($jobListId);
+        $jobCount = $jobList->job_count;
+        $jobCount = $jobCount - 1;
+        $jobList->job_count = $jobCount;
+        $jobList->save();
+        Log::info("ParallelLint Process Entity", [
+            '$jobList' => $jobList,
+        ]);
+
+        /**Send mail**/
+        $fileLog= $this->projectName.'_logParallelLint'.$this->jobEntity->jobs_list_id;
+
+        $mail = new SendMailController();
+        $mail->SendMail($this->addressMail,'Parallel Lint',$this->projectName,$fileLog);
 
     }
 

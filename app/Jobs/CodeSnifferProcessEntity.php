@@ -5,6 +5,8 @@ namespace App\Jobs;
 use App\JobEntity;
 use App\JobsList;
 use App\JobStatus;
+use App\Http\Controllers\SendMailController;
+use App\Http\Controllers\ProjectManagerController;
 use App\Http\Controllers\CodeSnifferController;
 use App\LogTest;
 use Illuminate\Bus\Queueable;
@@ -21,17 +23,23 @@ class CodeSnifferProcessEntity implements ShouldQueue
 
     protected $jobEntity;
     protected $urlGit;
+    protected $addressMail;
+    protected $projectName;
 
     /**
      * Create a new job instance.
      *
      * @param JobEntity $jobEntity
      */
-    public function __construct(JobEntity $jobEntity,$urlGit)
+    public function __construct(JobEntity $jobEntity,$urlGit,$address)
     {
+        $gitManager=new ProjectManagerController();
         /** ajouter un paramètre */
         $this->jobEntity = $jobEntity;
         $this->urlGit = $urlGit;
+        $this->addressMail = $address;
+        $this->projectName = $gitManager->getProjectName($urlGit);
+
     }
     /**
      * Execute the job.
@@ -63,6 +71,10 @@ class CodeSnifferProcessEntity implements ShouldQueue
             'jobentity id' => $this->jobEntity->id,
             'jobentity status' => $JobEntity->job_status_id,
         ]);
+        $fileLog= $this->projectName.'_logSniff'.$this->jobEntity->jobs_list_id;
+
+        $mail = new SendMailController();
+        $mail->SendMail($this->addressMail,'Code Sniffer',$this->projectName,$fileLog);
 
     }
 

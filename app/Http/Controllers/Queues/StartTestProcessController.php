@@ -9,7 +9,7 @@ use App\Jobs\ProjectDownload;
 use App\Jobs\TestFrontBackEntity;
 use App\Jobs\CodeSnifferProcessEntity;
 use App\Jobs\PhpLocProcessEntity;
-use App\Jobs\ParalleleLintProcessEntity;
+use App\Jobs\ParallelLintProcessEntity;
 use App\Jobs\TestProcessEntity;
 use App\JobsList;
 use App\JobStatus;
@@ -47,7 +47,7 @@ class StartTestProcessController extends Controller
 //        $GitManager = new ProjectManagerController();
 //        $GitManager->store($urlGit,$jobEntity);
         ProjectDownload::withChain([
-                new CodeSnifferProcessEntity($jobEntity, $urlGit)
+                new CodeSnifferProcessEntity($jobEntity,$request->mailUser, $urlGit)
         ])->dispatch($urlGit, $jobEntity,$urlGit);
 
 //        dispatch(new ProjectDownload($urlGit, $jobEntity,$urlGit));
