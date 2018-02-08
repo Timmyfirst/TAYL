@@ -5,6 +5,8 @@ namespace App\Jobs;
 use App\JobEntity;
 use App\JobsList;
 use App\JobStatus;
+use App\Http\Controllers\SendMailController;
+use App\Http\Controllers\ProjectManagerController;
 use App\Http\Controllers\PhpLocController;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
@@ -19,17 +21,23 @@ class PhpLocProcessEntity implements ShouldQueue
 
     protected $jobEntity;
     protected $urlGit;
+    protected $addressMail;
+    protected $projectName;
 
     /**
      * Create a new job instance.
      *
      * @param JobEntity $jobEntity
      */
-    public function __construct(JobEntity $jobEntity,$urlGit)
+    public function __construct(JobEntity $jobEntity,$urlGit,$address)
     {
+        $gitManager=new ProjectManagerController();
         /** ajouter un paramètre */
         $this->jobEntity = $jobEntity;
         $this->urlGit = $urlGit;
+        $this->addressMail = $address;
+        $this->projectName = $gitManager->getProjectName($urlGit);
+
     }
     /**
      * Execute the job.
@@ -68,6 +76,11 @@ class PhpLocProcessEntity implements ShouldQueue
         Log::info("PhpLoc Process Entity", [
             '$jobList' => $jobList,
         ]);
+        /**Send mail**/
+        $fileLog= $this->projectName.'_logPhpLoc'.$this->jobEntity->jobs_list_id;
+
+        $mail = new SendMailController();
+        $mail->SendMail($this->addressMail,'Php Loc',$this->projectName,$fileLog);
 
     }
 
