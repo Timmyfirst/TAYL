@@ -57,8 +57,10 @@ class GetJobStatusController extends Controller
 //        $jobsList = $jobsList::find($idJobList);
 
 //        $jobStatus = new JobStatus();
-        $jobEntities = DB::table('job_entity')->where('jobs_list_id', $idJobList)
-            ->orderBy('job_status_id', 'desc')->get();
+        $jobEntities = DB::table('job_entity')
+            ->where('jobs_list_id', $idJobList)
+            ->orderBy('job_status_id', 'desc')
+            ->get();
 
 //        $wip = $jobStatus::find(1);
 //        $jobEntity = new JobEntity();

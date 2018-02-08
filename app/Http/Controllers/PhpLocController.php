@@ -17,7 +17,7 @@ class PhpLocController extends Controller
         $date =  date('Y_m_d_G-i-s');
         $nameLogFile= $projectName.'_logPhpLoc'.$date;
         $pathStorage = public_path() . "/storage/";
-        $pathFinalLog= $pathStorage.'/logProject/'.$projectName.'_FinalLog.json';
+        $pathFinalLog= $pathStorage.'logProject/'.$projectName.'_FinalLog.json';
 
         /*execute a command to execute "phploc" and send the result to a log file*/
         shell_exec( 'cd '.$pathStorage .' && phploc project > logProject/'.$nameLogFile.'.txt');
@@ -31,11 +31,11 @@ class PhpLocController extends Controller
         $jsonTab = json_encode($logXml);
 
         /*write in file json*/
-        file_put_contents($pathStorage.'/logProject/'.$nameLogFile.'.json', '"phpLoc":' . $jsonTab . '');
+        file_put_contents($pathStorage.'logProject/'.$nameLogFile.'.json', '"phpLoc":' . $jsonTab . '');
 
 
         /*recup logPhpLoc*/
-        $json_source = file_get_contents($pathStorage.'/logProject/'.$nameLogFile.'.json');
+        $json_source = file_get_contents($pathStorage.'logProject/'.$nameLogFile.'.json');
 
         /*check if FinalLogJson exists */
         $finalLogJsonExist=  file_exists($pathFinalLog);

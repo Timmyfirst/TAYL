@@ -16,15 +16,15 @@ class ParallelLintController extends Controller
         $date =  date('Y_m_d_G-i-s');
         $nameLogFile= $projectName.'_logParallelLint'.$date;
         $pathStorage = public_path() . "/storage/";
-        $pathFinalLog= $pathStorage.'/logProject/'.$projectName.'_FinalLog.json';
+        $pathFinalLog= $pathStorage.'logProject/'.$projectName.'_FinalLog.json';
 
         /*execute a command to execute "code sniffer" and send the result to a log file*/
-        shell_exec( 'cd '.$pathStorage .' && parallel-lint  project > logProject/'.$nameLogFile.'.txt');
-        shell_exec( 'cd '.$pathStorage .' && parallel-lint  project --json > logProject/'.$nameLogFile.'.json');
+        shell_exec( 'cd '.$pathStorage .' && '.public_path().'/../vendor/bin/parallel-lint  project > logProject/'.$nameLogFile.'.txt');
+        shell_exec( 'cd '.$pathStorage .' && '.public_path().'/../vendor/bin/parallel-lint  project --json > logProject/'.$nameLogFile.'.json');
 
 
         /*recup logSniff*/
-        $json_source = file_get_contents($pathStorage.'/logProject/'.$nameLogFile.'.json');
+        $json_source = file_get_contents($pathStorage.'logProject/'.$nameLogFile.'.json');
 
         /*check if FinalLogJson exists */
         $finalLogJsonExist=  file_exists($pathFinalLog);
@@ -41,7 +41,7 @@ class ParallelLintController extends Controller
         $recupJsonFileFinal = substr($recupJsonFileFinal,1,-1);
         /*check if FinalLogJson is empty and concat FinalLogJson and logPhpLoc  */
         if(!empty($recupJsonFileFinal)){
-            $JsonFileFinal= '{'.$recupJsonFileFinal.',"codeSniff":'.$json_source.'}';
+            $JsonFileFinal= '{'.$recupJsonFileFinal.',"paralleleLint":'.$json_source.'}';
         }else{
             $JsonFileFinal= '{"paralleleLint":'.$json_source.'}';
         }

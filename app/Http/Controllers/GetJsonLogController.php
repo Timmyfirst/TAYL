@@ -20,10 +20,15 @@ class GetJsonLogController extends Controller
     public function store(Request $request)
 
     {
-        $filename = 'test';
-        $path = storage_path() . "/app/public/test.json"; // ie: /var/www/laravel/app/storage/json/filename.json
+        $filename = $request->projetGit;
+        $path = storage_path() . "/app/public/logProject/" . $filename . '_FinalLog.json'; // ie: /var/www/laravel/app/storage/json/filename.json
         $json = json_decode(file_get_contents($path), true);
-        return $json;
+
+        return response()->json([
+            'json' => $json,
+        ]);
+
+//        return  file_get_contents($path);
     }
     /**
      * Display a listing of the resource.

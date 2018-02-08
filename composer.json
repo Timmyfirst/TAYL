@@ -18,6 +18,7 @@
         "barryvdh/laravel-debugbar": "^3.1",
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",
+        "jakub-onderka/php-parallel-lint": "^0.9.2",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~6.0"
     },

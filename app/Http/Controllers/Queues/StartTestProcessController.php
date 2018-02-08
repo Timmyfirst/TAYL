@@ -38,23 +38,25 @@ class StartTestProcessController extends Controller
         Log::info("launch this job", [
             'jobentity id' =>  $jobEntity->id,
             'jobentity JobList id' =>  $jobsList->id,
+            'gitUrl' =>  $urlGit,
         ]);
 
-        if($request->codesniffer == 1) {
+//        if($request->codesniffer == 1) {
             dispatch(new CodeSnifferProcessEntity($jobEntity, $urlGit));
-        } else {
-            dispatch(new CodeSnifferProcessEntity($jobEntity, $urlGit));
-        }
-        if($request->phploc == 1) {
-            dispatch(new PhpLocProcessEntity($jobEntity, $urlGit));
-        } else {
-            dispatch(new PhpLocProcessEntity($jobEntity, $urlGit));
-        }
-        if($request->parallellint == 1) {
-            dispatch(new ParalleleLintProcessEntity($jobEntity, $urlGit));
-        } else {
-            dispatch(new ParalleleLintProcessEntity($jobEntity, $urlGit));
-        }
+//        }
+//        else {
+//            dispatch(new CodeSnifferProcessEntity($jobEntity, $urlGit));
+//        }
+//        if($request->phploc == 1) {
+//            dispatch(new PhpLocProcessEntity($jobEntity, $urlGit));
+//        } else {
+//            dispatch(new PhpLocProcessEntity($jobEntity, $urlGit));
+//        }
+//        if($request->parallellint == 1) {
+//            dispatch(new ParalleleLintProcessEntity($jobEntity, $urlGit));
+//        } else {
+//            dispatch(new ParalleleLintProcessEntity($jobEntity, $urlGit));
+//        }
 //        dispatch(new TestFrontBackEntity($jobEntity));
 
 

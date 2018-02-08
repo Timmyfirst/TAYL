@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\JobEntity;
+use App\JobStatus;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Storage;
 use App\LogTest;
 use Illuminate\Support\Facades\DB;
@@ -13,7 +16,10 @@ class CodeSnifferController extends Controller
 
     public function createCodeSnifferLog($urlGit){
 
-        $projectName =  $this->getProjectName($urlGit);
+
+
+//        $projectName =  $this->getProjectName($urlGit);
+        $projectName = 'TAYL-back';
         /*get the date to put it at the end of the log file name*/
         $date =  date('Y_m_d_G-i-s');
         $nameLogFile= $projectName.'_logSniff'.$date;
