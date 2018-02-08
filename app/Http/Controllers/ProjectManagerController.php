@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\CodeSnifferProcessEntity;
 use Illuminate\Http\Request;
 
 class ProjectManagerController extends Controller
 {
 
-  public function store($link)
+  public function store($link,$jobEntity)
   {
 
       /* Get project name */
-      $proj_name = $this->getProjectName($link);
-
+//      $proj_name = $this->getProjectName($link);
+        $proj_name = 'laravel-horizon-demo';
       /* Initialisation of clone command */
       $command = '';
 
@@ -25,9 +26,9 @@ class ProjectManagerController extends Controller
       /* Get download command */
       $command = $this->getCmdDownload($link, $proj_name);
 
+//      dd($command);
       /* Execution of command */
-      return shell_exec($command . ' 2>&1');
-
+        shell_exec($command . ' 2>&1');
       /* Execution and return */
 
   }
