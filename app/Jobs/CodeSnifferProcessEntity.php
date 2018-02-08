@@ -80,7 +80,9 @@ class CodeSnifferProcessEntity implements ShouldQueue
 
     public function createCodeSnifferLog($urlGit){
 
-        $projectName = 'TAYL-back';
+        $projectName =  $this->getProjectName($urlGit);
+//        $projectName =  "TAYL-back";
+
         /*get the date to put it at the end of the log file name*/
         $date =  date('Y_m_d_G-i-s');
         $nameLogFile= $projectName.'_logSniff'.$date;

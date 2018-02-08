@@ -41,4 +41,5 @@ Route::group(['prefix' => 'queues', 'namespace' => 'Queues'], function() {
 
 Route::get('/getStatus', 'GetJobStatusController@store');
 
+/** call back front */
 Route::get('/getJson', 'GetJsonLogController@store');

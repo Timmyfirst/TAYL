@@ -41,6 +41,7 @@ class StartTestProcessController extends Controller
             'gitUrl' =>  $urlGit,
         ]);
 
+
 //        if($request->codesniffer == 1) {
             dispatch(new CodeSnifferProcessEntity($jobEntity, $urlGit));
 //        }
@@ -63,7 +64,7 @@ class StartTestProcessController extends Controller
         //$GitManager->destroy($GitManager->getProjectName($urlGit));
 
         return response()->json([
-            'idJobList' => $jobsList->id
+            'idJobList' => $jobsList->id,
         ]);
 
     }
