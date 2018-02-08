@@ -14,7 +14,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Support\Facades\Log;
 
 
-class ParalleleLintProcessEntity implements ShouldQueue
+class ParallelLintProcessEntity implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -52,7 +52,7 @@ class ParalleleLintProcessEntity implements ShouldQueue
         ]);
 
         $ParallelLint = new ParallelLintController();
-        $ParallelLint->createParallelLintLog($this->urlGit);
+        $ParallelLint->createParallelLintLog($this->urlGit,$this->jobEntity->jobs_list_id);
 
         $JobEntity = JobEntity::find($this->jobEntity->id);
         $JobEntity->job_status_id = $wip->id;

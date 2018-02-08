@@ -6,7 +6,7 @@ use App\JobEntity;
 use App\Jobs\TestFrontBackEntity;
 use App\Jobs\CodeSnifferProcessEntity;
 use App\Jobs\PhpLocProcessEntity;
-use App\Jobs\ParalleleLintProcessEntity;
+use App\Jobs\ParallelLintProcessEntity;
 use App\Jobs\TestProcessEntity;
 use App\JobsList;
 use App\JobStatus;
@@ -38,7 +38,7 @@ class StartTestProcessController extends Controller
         if($request->phploc == 1) {
             $countTest++;
         }
-        if($request->parallelelint == 1) {
+        if($request->parallellint == 1) {
             $countTest++;
         }
 
@@ -79,9 +79,8 @@ class StartTestProcessController extends Controller
             $jobList = new JobsList();
             $jobList = $jobList::find($jobsList->id);
             //dd($jobList->job_count);
-            echo $jobList->job_count;
             if($jobList->job_count == 0){
-                echo 'destroy';
+
                 $GitManager->destroy($urlGit);
             }
         }while($jobList->job_count >0);

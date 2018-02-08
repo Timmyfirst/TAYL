@@ -9,14 +9,14 @@ use Illuminate\Support\Facades\DB;
 
 class ParallelLintController extends Controller
 {
-    public function createParallelLintLog($urlGit){
+    public function createParallelLintLog($urlGit,$jobsListId){
 
         $projectName =  $this->getProjectName($urlGit);
         /*get the date to put it at the end of the log file name*/
         $date =  date('Y_m_d_G-i-s');
-        $nameLogFile= $projectName.'_logParallelLint'.$date;
+        $nameLogFile= $projectName.'_logParallelLint'.$jobsListId;
         $pathStorage = public_path() . "/storage/";
-        $pathFinalLog= $pathStorage.'/logProject/'.$projectName.'_FinalLog.json';
+        $pathFinalLog= $pathStorage.'/logProject/'.$projectName.'_FinalLog'.$jobsListId.'.json';
 
         /*execute a command to execute "code sniffer" and send the result to a log file*/
         shell_exec( 'cd '.$pathStorage .' && parallel-lint  project > logProject/'.$nameLogFile.'.txt');
@@ -41,9 +41,9 @@ class ParallelLintController extends Controller
         $recupJsonFileFinal = substr($recupJsonFileFinal,1,-1);
         /*check if FinalLogJson is empty and concat FinalLogJson and logPhpLoc  */
         if(!empty($recupJsonFileFinal)){
-            $JsonFileFinal= '{'.$recupJsonFileFinal.',"paralleleLint":'.$json_source.'}';
+            $JsonFileFinal= '{'.$recupJsonFileFinal.',"parallelLint":'.$json_source.'}';
         }else{
-            $JsonFileFinal= '{"paralleleLint":'.$json_source.'}';
+            $JsonFileFinal= '{"parallelLint":'.$json_source.'}';
         }
         /*write in FinalLogJson*/
         file_put_contents($pathFinalLog, $JsonFileFinal);
