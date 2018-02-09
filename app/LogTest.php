@@ -11,14 +11,13 @@ class LogTest extends Model
 {
     use Notifiable;
     protected $table ='logTests';
-
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'path'
+        'path','type'
     ];
 
 }

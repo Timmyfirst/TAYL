@@ -17,12 +17,29 @@ Route::get('/', function () {
 
 Route::get('/check/{link}','ApiEntryController@store');
 
+Route::get('/download/{link}','DownloadController@store');
+
+Route::get('/sniff', 'CodeSnifferController@createCodeSnifferLog');
+
+Route::get('/PhpLoc', 'PhpLocController@createPhpLocLog');
+
+Route::get('/paralleleLint', 'ParallelLintController@createParallelLintLog');
+
+Route::get('/donationPayPal', 'donationPayPalController@donationPayPalRender');
+
+Route::get('/donationBitCoin', 'donationBitCoinController@donationPayPalRender');
+
+Route::get('/donationEther', 'DonationEtherController@donationEtherRender');
 
 
-Route::get('/sniff', 'CodeSnifferController@CreateLog');
-
+Route::get('/mail/{address}/test/{test}/projet/{projet}/filename/{filename}', 'SendMailController@sendMail');
 
 Route::group(['prefix' => 'queues', 'namespace' => 'Queues'], function() {
     Route::get('startTestProcess', 'StartTestProcessController')
          ->name('queues.startTestProcess');
 });
+
+Route::get('/getStatus', 'GetJobStatusController@store');
+
+/** call back front */
+Route::get('/getJson', 'GetJsonLogController@store');
