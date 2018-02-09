@@ -29,7 +29,6 @@ class SendMailController extends Controller
     $receiverAddress = $this->Address;
 
     Mail::to($receiverAddress)->send(new TestFinishedSendMail($this->Test, $this->Projet, $this->FileName));
-
   }
 
 

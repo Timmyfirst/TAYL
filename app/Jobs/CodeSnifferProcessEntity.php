@@ -97,9 +97,9 @@ class CodeSnifferProcessEntity implements ShouldQueue
 
         /*get the date to put it at the end of the log file name*/
         $date =  date('Y_m_d_G-i-s');
-        $nameLogFile= $projectName.'_logSniff'.$date;
+        $nameLogFile= $projectName.'_logSniff'.$this->jobEntity->jobs_list_id;
         $pathStorage = public_path() . "/storage/";
-        $pathFinalLog= $pathStorage.'/logProject/'.$projectName.'_FinalLog.json';
+        $pathFinalLog= $pathStorage.'/logProject/'.$projectName.'_FinalLog'.$this->jobEntity->jobs_list_id.'.json';
 
         /*execute a command to execute "code sniffer" and send the result to a log file*/
         shell_exec( 'cd '.$pathStorage .' && phpcs project > logProject/'.$nameLogFile.'.txt');
