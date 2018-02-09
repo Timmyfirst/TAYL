@@ -20,6 +20,7 @@ Route::get('/check/{link}','ApiEntryController@store');
 Route::get('/download/{link}','DownloadController@store');
 
 Route::get('/sniff/{urlGit}/{jobListId}', 'CodeSnifferController@createCodeSnifferLog');
+/**test*/
 
 Route::get('/PhpLoc', 'PhpLocController@createPhpLocLog');
 
