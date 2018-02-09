@@ -1,0 +1,2200 @@
+
+FILE: ...age/app/public/project/TAYL-back/public/vendor/horizon/js/app.js
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: ...u/TAYL-b/storage/app/public/project/TAYL-back/public/css/app.css
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: ...eau/TAYL-b/storage/app/public/project/TAYL-back/public/index.php
+----------------------------------------------------------------------
+FOUND 6 ERRORS AND 1 WARNING AFFECTING 4 LINES
+----------------------------------------------------------------------
+  6 | ERROR   | [x] Tag value indented incorrectly; expected 1 spaces
+    |         |     but found 2
+  7 | ERROR   | [x] Tag value indented incorrectly; expected 2 spaces
+    |         |     but found 3
+  8 | WARNING | [ ] PHP version not specified
+  8 | ERROR   | [ ] Missing @category tag in file comment
+  8 | ERROR   | [ ] Missing @license tag in file comment
+  8 | ERROR   | [ ] Missing @link tag in file comment
+ 38 | ERROR   | [x] File is being conditionally included; use
+    |         |     "include_once" instead
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 3 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...eau/TAYL-b/storage/app/public/project/TAYL-back/public/js/app.js
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: ...se/migrations/2014_10_12_100000_create_password_resets_table.php
+----------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  7 | ERROR | [ ] Missing class doc comment
+ 16 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 20 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...back/database/migrations/2018_01_17_093257_create_jobs_table.php
+----------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  7 | ERROR | [ ] Missing class doc comment
+ 16 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 24 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...tabase/migrations/2018_01_17_093313_create_failed_jobs_table.php
+----------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  7 | ERROR | [ ] Missing class doc comment
+ 16 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 23 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...-back/database/migrations/2018_01_30_151523_job_entity_table.php
+----------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  7 | ERROR | [ ] Missing class doc comment
+ 16 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 26 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...ack/database/migrations/2014_10_12_000000_create_users_table.php
+----------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  7 | ERROR | [ ] Missing class doc comment
+ 16 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 23 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...-back/database/migrations/2018_01_30_151427_job_status_table.php
+----------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  7 | ERROR | [ ] Missing class doc comment
+ 16 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 20 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...L-back/database/migrations/2018_01_30_151515_jobs_list_table.php
+----------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  7 | ERROR | [ ] Missing class doc comment
+ 16 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 20 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: .../database/migrations/2018_01_17_133410_create_logTests_table.php
+----------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  7 | ERROR | [ ] Missing class doc comment
+ 16 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 21 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...pp/public/project/TAYL-back/database/seeds/job_entity_seeder.php
+----------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+ 6 | ERROR | Missing class doc comment
+ 6 | ERROR | Class name must begin with a capital letter
+ 6 | ERROR | Class name is not valid; consider Job_Entity_Seeder
+   |       | instead
+----------------------------------------------------------------------
+
+
+FILE: ...p/public/project/TAYL-back/database/seeds/job_status_seeder2.php
+----------------------------------------------------------------------
+FOUND 16 ERRORS AFFECTING 14 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  6 | ERROR | [ ] Missing class doc comment
+  6 | ERROR | [ ] Class name must begin with a capital letter
+  6 | ERROR | [ ] Class name is not valid; consider Job_Status_Seeder
+    |       |     instead
+ 19 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 21 | ERROR | [x] Spaces must be used for alignment; tabs are not
+    |       |     allowed
+ 22 | ERROR | [x] Spaces must be used for alignment; tabs are not
+    |       |     allowed
+ 24 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+ 25 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 27 | ERROR | [x] Spaces must be used for alignment; tabs are not
+    |       |     allowed
+ 28 | ERROR | [x] Spaces must be used for alignment; tabs are not
+    |       |     allowed
+ 30 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+ 31 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 33 | ERROR | [x] Spaces must be used for alignment; tabs are not
+    |       |     allowed
+ 34 | ERROR | [x] Spaces must be used for alignment; tabs are not
+    |       |     allowed
+ 36 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 12 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...e/app/public/project/TAYL-back/database/seeds/DatabaseSeeder.php
+----------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  8 | ERROR | [ ] Missing class doc comment
+ 17 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 18 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...pp/public/project/TAYL-back/database/seeds/job_status_seeder.php
+----------------------------------------------------------------------
+FOUND 16 ERRORS AFFECTING 14 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  6 | ERROR | [ ] Missing class doc comment
+  6 | ERROR | [ ] Class name must begin with a capital letter
+  6 | ERROR | [ ] Class name is not valid; consider Job_Status_Seeder
+    |       |     instead
+ 19 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 21 | ERROR | [x] Spaces must be used for alignment; tabs are not
+    |       |     allowed
+ 22 | ERROR | [x] Spaces must be used for alignment; tabs are not
+    |       |     allowed
+ 24 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+ 25 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 27 | ERROR | [x] Spaces must be used for alignment; tabs are not
+    |       |     allowed
+ 28 | ERROR | [x] Spaces must be used for alignment; tabs are not
+    |       |     allowed
+ 30 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+ 31 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 33 | ERROR | [x] Spaces must be used for alignment; tabs are not
+    |       |     allowed
+ 34 | ERROR | [x] Spaces must be used for alignment; tabs are not
+    |       |     allowed
+ 36 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 12 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: .../app/public/project/TAYL-back/database/factories/UserFactory.php
+----------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+ 16 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 25 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...ureau/TAYL-b/storage/app/public/project/TAYL-back/routes/api.php
+----------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+ 16 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 18 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...ureau/TAYL-b/storage/app/public/project/TAYL-back/routes/web.php
+----------------------------------------------------------------------
+FOUND 12 ERRORS AND 1 WARNING AFFECTING 9 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | [ ] You must use "/**" style comments for a file
+    |         |     comment
+ 14 | ERROR   | [x] Opening parenthesis of a multi-line function call
+    |         |     must be the last content on the line
+ 16 | ERROR   | [x] Closing parenthesis of a multi-line function call
+    |         |     must be on a line by itself
+ 18 | ERROR   | [x] No space found after comma in function call
+ 20 | ERROR   | [x] No space found after comma in function call
+ 35 | WARNING | [ ] Line exceeds 85 characters; contains 109
+    |         |     characters
+ 37 | ERROR   | [x] Opening parenthesis of a multi-line function call
+    |         |     must be the last content on the line
+ 37 | ERROR   | [x] Expected 1 space after FUNCTION keyword; 0 found
+ 40 | ERROR   | [x] Closing parenthesis of a multi-line function call
+    |         |     must be on a line by itself
+ 44 | ERROR   | [x] The open comment tag must be the only content on
+    |         |     the line
+ 44 | ERROR   | [x] Doc comment short description must be on the
+    |         |     first line
+ 44 | ERROR   | [ ] Doc comment short description must start with a
+    |         |     capital letter
+ 44 | ERROR   | [x] The close comment tag must be the only content on
+    |         |     the line
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 10 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: .../TAYL-b/storage/app/public/project/TAYL-back/routes/channels.php
+----------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] You must use "/**" style comments for a file
+    |       |     comment
+ 14 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 16 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...u/TAYL-b/storage/app/public/project/TAYL-back/routes/console.php
+----------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+ 16 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 18 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: .../storage/app/public/project/TAYL-back/tests/Unit/ExampleTest.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+ 8 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...torage/app/public/project/TAYL-back/tests/CreatesApplication.php
+----------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  8 | ERROR | [ ] Missing trait doc comment
+ 17 | ERROR | [x] File is being conditionally included; use "include"
+    |       |     instead
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...orage/app/public/project/TAYL-back/tests/Feature/ExampleTest.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+ 8 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...u/TAYL-b/storage/app/public/project/TAYL-back/tests/TestCase.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+ 7 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: .../public/project/TAYL-back/app/Jobs/ParallelLintProcessEntity.php
+----------------------------------------------------------------------
+FOUND 33 ERRORS AND 3 WARNINGS AFFECTING 20 LINES
+----------------------------------------------------------------------
+   2 | ERROR   | [ ] Missing file doc comment
+  19 | ERROR   | [ ] Missing class doc comment
+  29 | ERROR   | [ ] Doc comment for parameter "$urlGit" missing
+  29 | ERROR   | [ ] Doc comment for parameter "$address" missing
+  32 | ERROR   | [ ] Missing parameter comment
+  37 | ERROR   | [x] The open comment tag must be the only content on
+     |         |     the line
+  37 | ERROR   | [x] Doc comment short description must be on the
+     |         |     first line
+  37 | ERROR   | [ ] Doc comment short description must start with a
+     |         |     capital letter
+  37 | ERROR   | [x] The close comment tag must be the only content
+     |         |     on the line
+  50 | ERROR   | [x] The open comment tag must be the only content on
+     |         |     the line
+  50 | ERROR   | [x] Doc comment short description must be on the
+     |         |     first line
+  50 | ERROR   | [ ] Doc comment short description must start with a
+     |         |     capital letter
+  50 | ERROR   | [x] The close comment tag must be the only content
+     |         |     on the line
+  51 | ERROR   | [x] The open comment tag must be the only content on
+     |         |     the line
+  51 | ERROR   | [x] Doc comment short description must be on the
+     |         |     first line
+  51 | ERROR   | [ ] Doc comment short description must start with a
+     |         |     capital letter
+  51 | ERROR   | [x] The close comment tag must be the only content
+     |         |     on the line
+  57 | ERROR   | [x] Opening parenthesis of a multi-line function
+     |         |     call must be the last content on the line
+  60 | ERROR   | [x] Closing parenthesis of a multi-line function
+     |         |     call must be on a line by itself
+  63 | ERROR   | [x] No space found after comma in function call
+  63 | WARNING | [ ] Line exceeds 85 characters; contains 91
+     |         |     characters
+  69 | ERROR   | [x] Opening parenthesis of a multi-line function
+     |         |     call must be the last content on the line
+  72 | ERROR   | [x] Closing parenthesis of a multi-line function
+     |         |     call must be on a line by itself
+  81 | ERROR   | [x] Opening parenthesis of a multi-line function
+     |         |     call must be the last content on the line
+  83 | ERROR   | [x] Closing parenthesis of a multi-line function
+     |         |     call must be on a line by itself
+  85 | ERROR   | [x] The open comment tag must be the only content on
+     |         |     the line
+  85 | ERROR   | [x] Doc comment short description must be on the
+     |         |     first line
+  85 | ERROR   | [x] The close comment tag must be the only content
+     |         |     on the line
+  86 | WARNING | [ ] Line exceeds 85 characters; contains 87
+     |         |     characters
+  89 | ERROR   | [x] No space found after comma in function call
+  89 | ERROR   | [x] No space found after comma in function call
+  89 | ERROR   | [x] No space found after comma in function call
+  89 | WARNING | [ ] Line exceeds 85 characters; contains 88
+     |         |     characters
+  93 | ERROR   | [ ] Missing function doc comment
+  99 | ERROR   | [x] Opening parenthesis of a multi-line function
+     |         |     call must be the last content on the line
+ 102 | ERROR   | [x] Closing parenthesis of a multi-line function
+     |         |     call must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 24 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...ge/app/public/project/TAYL-back/app/Jobs/TestFrontBackEntity.php
+----------------------------------------------------------------------
+FOUND 15 ERRORS AFFECTING 12 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+ 16 | ERROR | [ ] Missing class doc comment
+ 25 | ERROR | [ ] Missing parameter comment
+ 29 | ERROR | [x] The open comment tag must be the only content on
+    |       |     the line
+ 29 | ERROR | [x] Doc comment short description must be on the first
+    |       |     line
+ 29 | ERROR | [ ] Doc comment short description must start with a
+    |       |     capital letter
+ 29 | ERROR | [x] The close comment tag must be the only content on
+    |       |     the line
+ 42 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 45 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+ 50 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 52 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+ 56 | ERROR | [x] Expected 1 space after asterisk; 0 found
+ 57 | ERROR | [ ] Missing @return tag in function comment
+ 61 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 63 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 10 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...ge/app/public/project/TAYL-back/app/Jobs/PhpLocProcessEntity.php
+----------------------------------------------------------------------
+FOUND 25 ERRORS AFFECTING 17 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+ 18 | ERROR | [ ] Missing class doc comment
+ 27 | ERROR | [ ] Doc comment for parameter "$urlGit" missing
+ 27 | ERROR | [ ] Doc comment for parameter "$address" missing
+ 30 | ERROR | [ ] Missing parameter comment
+ 35 | ERROR | [x] The open comment tag must be the only content on
+    |       |     the line
+ 35 | ERROR | [x] Doc comment short description must be on the first
+    |       |     line
+ 35 | ERROR | [ ] Doc comment short description must start with a
+    |       |     capital letter
+ 35 | ERROR | [x] The close comment tag must be the only content on
+    |       |     the line
+ 52 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 55 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+ 57 | ERROR | [x] No space found after comma in function call
+ 63 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 66 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+ 76 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 78 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+ 79 | ERROR | [x] The open comment tag must be the only content on
+    |       |     the line
+ 79 | ERROR | [x] Doc comment short description must be on the first
+    |       |     line
+ 79 | ERROR | [x] The close comment tag must be the only content on
+    |       |     the line
+ 83 | ERROR | [x] No space found after comma in function call
+ 83 | ERROR | [x] No space found after comma in function call
+ 83 | ERROR | [x] No space found after comma in function call
+ 87 | ERROR | [ ] Missing function doc comment
+ 93 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 96 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 18 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...p/public/project/TAYL-back/app/Jobs/CodeSnifferProcessEntity.php
+----------------------------------------------------------------------
+FOUND 44 ERRORS AND 7 WARNINGS AFFECTING 30 LINES
+----------------------------------------------------------------------
+   2 | ERROR   | [ ] Missing file doc comment
+  20 | ERROR   | [ ] Missing class doc comment
+  29 | ERROR   | [ ] Doc comment for parameter "$urlGit" missing
+  29 | ERROR   | [ ] Doc comment for parameter "$address" missing
+  32 | ERROR   | [ ] Missing parameter comment
+  37 | ERROR   | [x] The open comment tag must be the only content on
+     |         |     the line
+  37 | ERROR   | [x] Doc comment short description must be on the
+     |         |     first line
+  37 | ERROR   | [ ] Doc comment short description must start with a
+     |         |     capital letter
+  37 | ERROR   | [x] The close comment tag must be the only content
+     |         |     on the line
+  51 | ERROR   | [x] The open comment tag must be the only content on
+     |         |     the line
+  51 | ERROR   | [x] Doc comment short description must be on the
+     |         |     first line
+  51 | ERROR   | [ ] Doc comment short description must start with a
+     |         |     capital letter
+  51 | ERROR   | [x] The close comment tag must be the only content
+     |         |     on the line
+  52 | ERROR   | [x] The open comment tag must be the only content on
+     |         |     the line
+  52 | ERROR   | [x] Doc comment short description must be on the
+     |         |     first line
+  52 | ERROR   | [ ] Doc comment short description must start with a
+     |         |     capital letter
+  52 | ERROR   | [x] The close comment tag must be the only content
+     |         |     on the line
+  58 | ERROR   | [x] Opening parenthesis of a multi-line function
+     |         |     call must be the last content on the line
+  62 | ERROR   | [x] Closing parenthesis of a multi-line function
+     |         |     call must be on a line by itself
+  70 | ERROR   | [x] Opening parenthesis of a multi-line function
+     |         |     call must be the last content on the line
+  73 | ERROR   | [x] Closing parenthesis of a multi-line function
+     |         |     call must be on a line by itself
+  77 | ERROR   | [x] No space found after comma in function call
+  77 | ERROR   | [x] No space found after comma in function call
+  77 | ERROR   | [x] No space found after comma in function call
+  77 | WARNING | [ ] Line exceeds 85 characters; contains 87
+     |         |     characters
+  81 | ERROR   | [ ] Missing function doc comment
+  87 | ERROR   | [x] Opening parenthesis of a multi-line function
+     |         |     call must be the last content on the line
+  90 | ERROR   | [x] Closing parenthesis of a multi-line function
+     |         |     call must be on a line by itself
+  93 | ERROR   | [ ] Missing function doc comment
+  93 | ERROR   | [x] Opening brace should be on a new line
+  96 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 0
+ 102 | WARNING | [ ] Line exceeds 85 characters; contains 115
+     |         |     characters
+ 104 | WARNING | [ ] Line exceeds 85 characters; contains 89
+     |         |     characters
+ 105 | ERROR   | [x] Space after opening parenthesis of function call
+     |         |     prohibited
+ 105 | WARNING | [ ] Line exceeds 85 characters; contains 95
+     |         |     characters
+ 106 | ERROR   | [x] Space after opening parenthesis of function call
+     |         |     prohibited
+ 106 | WARNING | [ ] Line exceeds 85 characters; contains 110
+     |         |     characters
+ 110 | WARNING | [ ] Line exceeds 85 characters; contains 91
+     |         |     characters
+ 114 | ERROR   | [ ] Expected "if (...) {\n"; found "if(...){\n"
+ 114 | ERROR   | [x] There must be a single space between the closing
+     |         |     parenthesis and the opening brace of a
+     |         |     multi-line IF statement; found 0 spaces
+ 117 | ERROR   | [ ] Expected "} else {\n"; found "}else{\n"
+ 124 | ERROR   | [x] No space found after comma in function call
+ 124 | ERROR   | [x] No space found after comma in function call
+ 126 | ERROR   | [ ] Expected "if (...) {\n"; found "if(...){\n"
+ 126 | ERROR   | [x] There must be a single space between the closing
+     |         |     parenthesis and the opening brace of a
+     |         |     multi-line IF statement; found 0 spaces
+ 128 | ERROR   | [ ] Expected "} else {\n"; found "}else{\n"
+ 136 | ERROR   | [ ] Missing function doc comment
+ 136 | ERROR   | [x] Opening brace should be on a new line
+ 145 | ERROR   | [ ] You must use "/**" style comments for a function
+     |         |     comment
+ 145 | ERROR   | [x] Opening brace should be on a new line
+ 146 | WARNING | [ ] Line exceeds 85 characters; contains 120
+     |         |     characters
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 28 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...torage/app/public/project/TAYL-back/app/Jobs/ProjectDownload.php
+----------------------------------------------------------------------
+FOUND 25 ERRORS AND 3 WARNINGS AFFECTING 21 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | [ ] Missing file doc comment
+ 11 | ERROR   | [ ] Missing class doc comment
+ 14 | ERROR   | [ ] Missing short description in doc comment
+ 17 | ERROR   | [ ] Private member variable "link" must be prefixed
+    |         |     with an underscore
+ 18 | ERROR   | [ ] Missing short description in doc comment
+ 21 | ERROR   | [ ] Private member variable "jobEntity" must be
+    |         |     prefixed with an underscore
+ 22 | ERROR   | [ ] Missing short description in doc comment
+ 25 | ERROR   | [ ] Private member variable "urlGit" must be prefixed
+    |         |     with an underscore
+ 27 | ERROR   | [ ] Doc comment for parameter "$link" missing
+ 27 | ERROR   | [ ] Doc comment for parameter "$jobEntity" missing
+ 27 | ERROR   | [ ] Doc comment for parameter "$urlGit" missing
+ 30 | ERROR   | [ ] Missing parameter name
+ 31 | ERROR   | [ ] Missing parameter name
+ 32 | ERROR   | [ ] Missing parameter name
+ 56 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 0
+ 59 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 0
+ 69 | ERROR   | [ ] You must use "/**" style comments for a function
+    |         |     comment
+ 69 | ERROR   | [x] Opening brace should be on a new line
+ 70 | WARNING | [ ] Line exceeds 85 characters; contains 120
+    |         |     characters
+ 74 | ERROR   | [ ] You must use "/**" style comments for a function
+    |         |     comment
+ 74 | ERROR   | [ ] Private method name
+    |         |     "ProjectDownload::getCmdDownload" must be
+    |         |     prefixed with an underscore
+ 74 | ERROR   | [x] Opening brace should be on a new line
+ 78 | WARNING | [ ] Line exceeds 85 characters; contains 88
+    |         |     characters
+ 94 | ERROR   | [ ] You must use "/**" style comments for a function
+    |         |     comment
+ 94 | ERROR   | [ ] Private method name
+    |         |     "ProjectDownload::getCmdCount" must be prefixed
+    |         |     with an underscore
+ 94 | ERROR   | [x] Opening brace should be on a new line
+ 95 | WARNING | [ ] Line exceeds 85 characters; contains 109
+    |         |     characters
+ 98 | ERROR   | [ ] Missing function doc comment
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 5 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...eau/TAYL-b/storage/app/public/project/TAYL-back/app/JobsList.php
+----------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+----------------------------------------------------------------------
+  2 | ERROR | Missing file doc comment
+  7 | ERROR | Missing class doc comment
+ 23 | ERROR | Missing function doc comment
+----------------------------------------------------------------------
+
+
+FILE: .../Bureau/TAYL-b/storage/app/public/project/TAYL-back/app/User.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+ 8 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...e/app/public/project/TAYL-back/app/Mail/TestFinishedSendMail.php
+----------------------------------------------------------------------
+FOUND 8 ERRORS AND 1 WARNING AFFECTING 6 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | [ ] Missing file doc comment
+ 10 | ERROR   | [ ] Missing class doc comment
+ 19 | ERROR   | [ ] Doc comment for parameter "$test" missing
+ 19 | ERROR   | [ ] Doc comment for parameter "$projet" missing
+ 19 | ERROR   | [ ] Doc comment for parameter "$filename" missing
+ 39 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 40 | ERROR   | [x] Object operator not indented correctly; expected
+    |         |     10 spaces but found 18
+ 40 | WARNING | [ ] Line exceeds 85 characters; contains 89
+    |         |     characters
+ 41 | ERROR   | [x] Object operator not indented correctly; expected
+    |         |     10 spaces but found 20
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 3 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...YL-b/storage/app/public/project/TAYL-back/app/Console/Kernel.php
+----------------------------------------------------------------------
+FOUND 6 ERRORS AFFECTING 5 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  8 | ERROR | [ ] Missing class doc comment
+ 22 | ERROR | [ ] Missing parameter comment
+ 22 | ERROR | [x] Expected 1 spaces after parameter type; 2 found
+ 23 | ERROR | [ ] Tag cannot be grouped with parameter tags in a doc
+    |       |     comment
+ 39 | ERROR | [x] File is being conditionally included; use "include"
+    |       |     instead
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...reau/TAYL-b/storage/app/public/project/TAYL-back/app/helpers.php
+----------------------------------------------------------------------
+FOUND 24 ERRORS AFFECTING 15 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  6 | ERROR | [ ] Missing short description in doc comment
+  6 | ERROR | [ ] Doc comment for parameter "$id_jobEntity" missing
+  7 | ERROR | [ ] Missing parameter name
+  8 | ERROR | [ ] Missing @return tag in function comment
+  9 | ERROR | [x] Opening brace should be on a new line
+ 10 | ERROR | [x] The open comment tag must be the only content on
+    |       |     the line
+ 10 | ERROR | [ ] Missing short description in doc comment
+ 10 | ERROR | [x] The close comment tag must be the only content on
+    |       |     the line
+ 18 | ERROR | [ ] Missing short description in doc comment
+ 18 | ERROR | [ ] Doc comment for parameter "$id_jobEntity" missing
+ 19 | ERROR | [ ] Missing parameter name
+ 20 | ERROR | [ ] Missing @return tag in function comment
+ 21 | ERROR | [x] Opening brace should be on a new line
+ 22 | ERROR | [x] The open comment tag must be the only content on
+    |       |     the line
+ 22 | ERROR | [ ] Missing short description in doc comment
+ 22 | ERROR | [x] The close comment tag must be the only content on
+    |       |     the line
+ 29 | ERROR | [ ] Missing short description in doc comment
+ 29 | ERROR | [ ] Doc comment for parameter "$id_jobsList" missing
+ 30 | ERROR | [ ] Missing parameter name
+ 33 | ERROR | [x] Opening brace should be on a new line
+ 35 | ERROR | [x] The open comment tag must be the only content on
+    |       |     the line
+ 35 | ERROR | [ ] Missing short description in doc comment
+ 35 | ERROR | [x] The close comment tag must be the only content on
+    |       |     the line
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 9 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...reau/TAYL-b/storage/app/public/project/TAYL-back/app/LogTest.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+  2 | ERROR | Missing file doc comment
+ 10 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...roject/TAYL-back/app/Http/Middleware/RedirectIfAuthenticated.php
+----------------------------------------------------------------------
+FOUND 9 ERRORS AFFECTING 6 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  8 | ERROR | [ ] Missing class doc comment
+ 13 | ERROR | [ ] Missing parameter comment
+ 13 | ERROR | [x] Expected 1 spaces after parameter type; 2 found
+ 14 | ERROR | [ ] Missing parameter comment
+ 14 | ERROR | [x] Expected 17 spaces after parameter type; 2 found
+ 15 | ERROR | [ ] Missing parameter comment
+ 15 | ERROR | [x] Expected 14 spaces after parameter type; 2 found
+ 16 | ERROR | [ ] Tag cannot be grouped with parameter tags in a doc
+    |       |     comment
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 3 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...pp/public/project/TAYL-back/app/Http/Middleware/TrustProxies.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+ 8 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...app/public/project/TAYL-back/app/Http/Middleware/TrimStrings.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+ 7 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: .../public/project/TAYL-back/app/Http/Middleware/EncryptCookies.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+ 7 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...public/project/TAYL-back/app/Http/Middleware/VerifyCsrfToken.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+ 7 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...ic/project/TAYL-back/app/Http/Controllers/SendMailController.php
+----------------------------------------------------------------------
+FOUND 22 ERRORS AND 1 WARNING AFFECTING 16 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | [ ] Missing file doc comment
+  9 | ERROR   | [ ] Missing class doc comment
+ 12 | ERROR   | [x] Line indented incorrectly; expected 4 spaces,
+    |         |     found 2
+ 13 | ERROR   | [x] Line indented incorrectly; expected 4 spaces,
+    |         |     found 2
+ 14 | ERROR   | [x] Line indented incorrectly; expected 4 spaces,
+    |         |     found 2
+ 15 | ERROR   | [x] Line indented incorrectly; expected 4 spaces,
+    |         |     found 2
+ 17 | ERROR   | [x] Line indented incorrectly; expected at least 4
+    |         |     spaces, found 2
+ 17 | ERROR   | [ ] Doc comment for parameter "$address" missing
+ 17 | ERROR   | [ ] Doc comment for parameter "$test" missing
+ 17 | ERROR   | [ ] Doc comment for parameter "$projet" missing
+ 17 | ERROR   | [ ] Doc comment for parameter "$filename" missing
+ 21 | ERROR   | [ ] There must be no blank lines after the function
+    |         |     comment
+ 23 | ERROR   | [x] Line indented incorrectly; expected 4 spaces,
+    |         |     found 2
+ 23 | ERROR   | [ ] Public method name "SendMailController::SendMail"
+    |         |     is not in camel caps format
+ 23 | ERROR   | [x] Opening brace should be on a new line
+ 24 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 4
+ 25 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 4
+ 26 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 4
+ 27 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 4
+ 29 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 4
+ 31 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 4
+ 31 | WARNING | [ ] Line exceeds 85 characters; contains 108
+    |         |     characters
+ 32 | ERROR   | [x] Line indented incorrectly; expected 4 spaces,
+    |         |     found 2
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 14 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...ject/TAYL-back/app/Http/Controllers/donationPayPalController.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 3 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  7 | ERROR | [ ] Missing class doc comment
+  7 | ERROR | [ ] Class name must begin with a capital letter
+ 10 | ERROR | [ ] Missing function doc comment
+ 10 | ERROR | [x] Opening brace should be on a new line
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...blic/project/TAYL-back/app/Http/Controllers/PhpLocController.php
+----------------------------------------------------------------------
+FOUND 21 ERRORS AND 6 WARNINGS AFFECTING 17 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | [ ] Missing file doc comment
+ 11 | ERROR   | [ ] Missing class doc comment
+ 13 | ERROR   | [ ] Missing function doc comment
+ 13 | ERROR   | [x] Opening brace should be on a new line
+ 23 | ERROR   | [x] Space after opening parenthesis of function call
+    |         |     prohibited
+ 23 | WARNING | [ ] Line exceeds 85 characters; contains 96
+    |         |     characters
+ 24 | ERROR   | [x] Space after opening parenthesis of function call
+    |         |     prohibited
+ 24 | WARNING | [ ] Line exceeds 85 characters; contains 104
+    |         |     characters
+ 28 | WARNING | [ ] Line exceeds 85 characters; contains 86
+    |         |     characters
+ 34 | WARNING | [ ] Line exceeds 85 characters; contains 105
+    |         |     characters
+ 38 | WARNING | [ ] Line exceeds 85 characters; contains 91
+    |         |     characters
+ 42 | ERROR   | [ ] Expected "if (...) {\n"; found "if(...){\n"
+ 42 | ERROR   | [x] There must be a single space between the closing
+    |         |     parenthesis and the opening brace of a multi-line
+    |         |     IF statement; found 0 spaces
+ 45 | ERROR   | [ ] Expected "} else {\n"; found "}else{\n"
+ 51 | ERROR   | [x] No space found after comma in function call
+ 51 | ERROR   | [x] No space found after comma in function call
+ 53 | ERROR   | [ ] Expected "if (...) {\n"; found "if(...){\n"
+ 53 | ERROR   | [x] There must be a single space between the closing
+    |         |     parenthesis and the opening brace of a multi-line
+    |         |     IF statement; found 0 spaces
+ 55 | ERROR   | [x] Line indented incorrectly; expected 8 spaces,
+    |         |     found 12
+ 55 | ERROR   | [x] Closing brace indented incorrectly; expected 8
+    |         |     spaces, found 12
+ 55 | ERROR   | [ ] Expected "} else {\n"; found "}else{\n"
+ 57 | ERROR   | [x] Line indented incorrectly; expected 8 spaces,
+    |         |     found 12
+ 65 | ERROR   | [ ] Missing function doc comment
+ 65 | ERROR   | [x] Opening brace should be on a new line
+ 73 | ERROR   | [ ] You must use "/**" style comments for a function
+    |         |     comment
+ 73 | ERROR   | [x] Opening brace should be on a new line
+ 74 | WARNING | [ ] Line exceeds 85 characters; contains 120
+    |         |     characters
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 12 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...project/TAYL-back/app/Http/Controllers/CodeSnifferController.php
+----------------------------------------------------------------------
+FOUND 19 ERRORS AND 6 WARNINGS AFFECTING 17 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | [ ] Missing file doc comment
+ 14 | ERROR   | [ ] Missing class doc comment
+ 17 | ERROR   | [ ] Missing function doc comment
+ 17 | ERROR   | [x] Opening brace should be on a new line
+ 21 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 0
+ 27 | WARNING | [ ] Line exceeds 85 characters; contains 96
+    |         |     characters
+ 29 | WARNING | [ ] Line exceeds 85 characters; contains 89
+    |         |     characters
+ 30 | ERROR   | [x] Space after opening parenthesis of function call
+    |         |     prohibited
+ 30 | WARNING | [ ] Line exceeds 85 characters; contains 95
+    |         |     characters
+ 31 | ERROR   | [x] Space after opening parenthesis of function call
+    |         |     prohibited
+ 31 | WARNING | [ ] Line exceeds 85 characters; contains 110
+    |         |     characters
+ 35 | WARNING | [ ] Line exceeds 85 characters; contains 91
+    |         |     characters
+ 39 | ERROR   | [ ] Expected "if (...) {\n"; found "if(...){\n"
+ 39 | ERROR   | [x] There must be a single space between the closing
+    |         |     parenthesis and the opening brace of a multi-line
+    |         |     IF statement; found 0 spaces
+ 42 | ERROR   | [ ] Expected "} else {\n"; found "}else{\n"
+ 49 | ERROR   | [x] No space found after comma in function call
+ 49 | ERROR   | [x] No space found after comma in function call
+ 51 | ERROR   | [ ] Expected "if (...) {\n"; found "if(...){\n"
+ 51 | ERROR   | [x] There must be a single space between the closing
+    |         |     parenthesis and the opening brace of a multi-line
+    |         |     IF statement; found 0 spaces
+ 53 | ERROR   | [ ] Expected "} else {\n"; found "}else{\n"
+ 61 | ERROR   | [ ] Missing function doc comment
+ 61 | ERROR   | [x] Opening brace should be on a new line
+ 70 | ERROR   | [ ] You must use "/**" style comments for a function
+    |         |     comment
+ 70 | ERROR   | [x] Opening brace should be on a new line
+ 71 | WARNING | [ ] Line exceeds 85 characters; contains 120
+    |         |     characters
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 10 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...ect/TAYL-back/app/Http/Controllers/donationBitCoinController.php
+----------------------------------------------------------------------
+FOUND 9 ERRORS AND 1 WARNING AFFECTING 7 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | [ ] Missing file doc comment
+  9 | ERROR   | [ ] Missing class doc comment
+  9 | ERROR   | [ ] Class name must begin with a capital letter
+ 17 | ERROR   | [ ] Private member variable "addressBitCoin" must be
+    |         |     prefixed with an underscore
+ 18 | ERROR   | [ ] Private member variable "urlQrCode" must be
+    |         |     prefixed with an underscore
+ 18 | WARNING | [ ] Line exceeds 85 characters; contains 131
+    |         |     characters
+ 21 | ERROR   | [ ] Missing function doc comment
+ 21 | ERROR   | [x] Opening brace should be on a new line
+ 23 | ERROR   | [x] Opening parenthesis of a multi-line function call
+    |         |     must be the last content on the line
+ 26 | ERROR   | [x] Closing parenthesis of a multi-line function call
+    |         |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 3 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...roject/TAYL-back/app/Http/Controllers/GetJobStatusController.php
+----------------------------------------------------------------------
+FOUND 28 ERRORS AND 1 WARNING AFFECTING 23 LINES
+----------------------------------------------------------------------
+   2 | ERROR   | [ ] Missing file doc comment
+  19 | ERROR   | [ ] Missing class doc comment
+  46 | ERROR   | [ ] Missing parameter comment
+  46 | ERROR   | [x] Expected 1 spaces after parameter type; 2 found
+  47 | ERROR   | [ ] Tag cannot be grouped with parameter tags in a
+     |         |     doc comment
+  57 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 0
+  59 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 0
+  65 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 0
+  66 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 0
+  67 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 0
+  68 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 0
+  69 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 0
+  70 | WARNING | [ ] Line exceeds 85 characters; contains 118
+     |         |     characters
+  72 | ERROR   | [x] Opening parenthesis of a multi-line function
+     |         |     call must be the last content on the line
+  78 | ERROR   | [x] Closing parenthesis of a multi-line function
+     |         |     call must be on a line by itself
+  84 | ERROR   | [ ] Missing parameter comment
+  84 | ERROR   | [x] Expected 1 spaces after parameter type; 2 found
+  85 | ERROR   | [ ] Tag cannot be grouped with parameter tags in a
+     |         |     doc comment
+  95 | ERROR   | [ ] Missing parameter comment
+  95 | ERROR   | [x] Expected 1 spaces after parameter type; 2 found
+  96 | ERROR   | [ ] Tag cannot be grouped with parameter tags in a
+     |         |     doc comment
+ 106 | ERROR   | [ ] Missing parameter comment
+ 106 | ERROR   | [x] Expected 1 spaces after parameter type; 2 found
+ 107 | ERROR   | [ ] Missing parameter comment
+ 107 | ERROR   | [x] Expected 22 spaces after parameter type; 2 found
+ 108 | ERROR   | [ ] Tag cannot be grouped with parameter tags in a
+     |         |     doc comment
+ 118 | ERROR   | [ ] Missing parameter comment
+ 118 | ERROR   | [x] Expected 1 spaces after parameter type; 2 found
+ 119 | ERROR   | [ ] Tag cannot be grouped with parameter tags in a
+     |         |     doc comment
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 15 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...ject/TAYL-back/app/Http/Controllers/ProjectManagerController.php
+----------------------------------------------------------------------
+FOUND 60 ERRORS AND 2 WARNINGS AFFECTING 50 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | [ ] Missing file doc comment
+  8 | ERROR   | [ ] Missing class doc comment
+ 11 | ERROR   | [x] Line indented incorrectly; expected 4 spaces,
+    |         |     found 2
+ 11 | ERROR   | [ ] Missing function doc comment
+ 12 | ERROR   | [x] Line indented incorrectly; expected at least 4
+    |         |     spaces, found 2
+ 14 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 15 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 0
+ 17 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 18 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 20 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 21 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 23 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 24 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 26 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 27 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 29 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 0
+ 30 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 32 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 34 | ERROR   | [x] Line indented incorrectly; expected 4 spaces,
+    |         |     found 2
+ 36 | ERROR   | [x] Line indented incorrectly; expected at least 4
+    |         |     spaces, found 2
+ 37 | ERROR   | [x] Line indented incorrectly; expected 4 spaces,
+    |         |     found 2
+ 37 | ERROR   | [ ] You must use "/**" style comments for a function
+    |         |     comment
+ 37 | ERROR   | [x] Opening brace should be on a new line
+ 38 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 4
+ 38 | WARNING | [ ] Line exceeds 85 characters; contains 116
+    |         |     characters
+ 39 | ERROR   | [x] Line indented incorrectly; expected 4 spaces,
+    |         |     found 2
+ 41 | ERROR   | [x] Line indented incorrectly; expected at least 4
+    |         |     spaces, found 2
+ 42 | ERROR   | [x] Line indented incorrectly; expected 4 spaces,
+    |         |     found 2
+ 42 | ERROR   | [ ] You must use "/**" style comments for a function
+    |         |     comment
+ 42 | ERROR   | [ ] Private method name
+    |         |     "ProjectManagerController::getCmdDownload" must
+    |         |     be prefixed with an underscore
+ 42 | ERROR   | [x] Opening brace should be on a new line
+ 43 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 4
+ 45 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 4
+ 46 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 47 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 48 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 4
+ 50 | ERROR   | [x] Line indented incorrectly; expected 8 spaces,
+    |         |     found 4
+ 51 | ERROR   | [x] Line indented incorrectly; expected 12 spaces,
+    |         |     found 8
+ 52 | ERROR   | [x] Line indented incorrectly; expected at least 16
+    |         |     spaces, found 10
+ 53 | ERROR   | [x] Line indented incorrectly; expected 12 spaces,
+    |         |     found 8
+ 54 | ERROR   | [x] Line indented incorrectly; expected at least 16
+    |         |     spaces, found 10
+ 55 | ERROR   | [x] Line indented incorrectly; expected 12 spaces,
+    |         |     found 8
+ 56 | ERROR   | [x] Line indented incorrectly; expected 8 spaces,
+    |         |     found 4
+ 58 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 4
+ 59 | ERROR   | [x] Line indented incorrectly; expected 4 spaces,
+    |         |     found 2
+ 61 | ERROR   | [x] Line indented incorrectly; expected at least 4
+    |         |     spaces, found 2
+ 62 | ERROR   | [x] Line indented incorrectly; expected 4 spaces,
+    |         |     found 2
+ 62 | ERROR   | [ ] You must use "/**" style comments for a function
+    |         |     comment
+ 62 | ERROR   | [ ] Private method name
+    |         |     "ProjectManagerController::getCmdCount" must be
+    |         |     prefixed with an underscore
+ 62 | ERROR   | [x] Opening brace should be on a new line
+ 63 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 4
+ 63 | WARNING | [ ] Line exceeds 85 characters; contains 105
+    |         |     characters
+ 64 | ERROR   | [x] Line indented incorrectly; expected 4 spaces,
+    |         |     found 2
+ 66 | ERROR   | [x] Line indented incorrectly; expected 4 spaces,
+    |         |     found 2
+ 66 | ERROR   | [ ] Missing function doc comment
+ 67 | ERROR   | [x] Line indented incorrectly; expected at least 4
+    |         |     spaces, found 2
+ 68 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 69 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 71 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 72 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 74 | ERROR   | [x] Line indented incorrectly; expected at least 8
+    |         |     spaces, found 6
+ 76 | ERROR   | [x] Line indented incorrectly; expected 4 spaces,
+    |         |     found 2
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 51 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...app/public/project/TAYL-back/app/Http/Controllers/Controller.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+  2 | ERROR | Missing file doc comment
+ 10 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...ic/project/TAYL-back/app/Http/Controllers/ApiEntryController.php
+----------------------------------------------------------------------
+FOUND 12 ERRORS AFFECTING 11 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  7 | ERROR | [ ] Missing class doc comment
+ 10 | ERROR | [x] Line indented incorrectly; expected 4 spaces, found
+    |       |     2
+ 10 | ERROR | [ ] Missing function doc comment
+ 11 | ERROR | [x] Line indented incorrectly; expected at least 4
+    |       |     spaces, found 2
+ 12 | ERROR | [x] Line indented incorrectly; expected 8 spaces, found
+    |       |     4
+ 13 | ERROR | [x] Line indented incorrectly; expected at least 12
+    |       |     spaces, found 6
+ 14 | ERROR | [x] Line indented incorrectly; expected at least 12
+    |       |     spaces, found 6
+ 15 | ERROR | [x] Line indented incorrectly; expected 8 spaces, found
+    |       |     4
+ 16 | ERROR | [x] Line indented incorrectly; expected at least 12
+    |       |     spaces, found 6
+ 17 | ERROR | [x] Line indented incorrectly; expected 8 spaces, found
+    |       |     4
+ 19 | ERROR | [x] Line indented incorrectly; expected 4 spaces, found
+    |       |     2
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 9 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...oject/TAYL-back/app/Http/Controllers/Auth/RegisterController.php
+----------------------------------------------------------------------
+FOUND 12 ERRORS AFFECTING 10 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+ 10 | ERROR | [ ] Missing class doc comment
+ 45 | ERROR | [ ] Missing parameter comment
+ 45 | ERROR | [x] Expected 1 spaces after parameter type; 2 found
+ 46 | ERROR | [ ] Tag cannot be grouped with parameter tags in a doc
+    |       |     comment
+ 50 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 54 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+ 60 | ERROR | [ ] Missing parameter comment
+ 60 | ERROR | [x] Expected 1 spaces after parameter type; 2 found
+ 61 | ERROR | [ ] Tag cannot be grouped with parameter tags in a doc
+    |       |     comment
+ 65 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 69 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 6 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...TAYL-back/app/Http/Controllers/Auth/ForgotPasswordController.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+ 8 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: .../project/TAYL-back/app/Http/Controllers/Auth/LoginController.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+ 8 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: .../TAYL-back/app/Http/Controllers/Auth/ResetPasswordController.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+ 8 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...ublic/project/TAYL-back/app/Http/Controllers/GetIdController.php
+----------------------------------------------------------------------
+FOUND 28 ERRORS AND 1 WARNING AFFECTING 23 LINES
+----------------------------------------------------------------------
+   2 | ERROR   | [ ] Missing file doc comment
+  19 | ERROR   | [ ] Missing class doc comment
+  46 | ERROR   | [ ] Missing parameter comment
+  46 | ERROR   | [x] Expected 1 spaces after parameter type; 2 found
+  47 | ERROR   | [ ] Tag cannot be grouped with parameter tags in a
+     |         |     doc comment
+  56 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 0
+  58 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 0
+  59 | WARNING | [ ] Line exceeds 85 characters; contains 89
+     |         |     characters
+  61 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 0
+  62 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 0
+  63 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 0
+  64 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 0
+  65 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 0
+  67 | ERROR   | [x] Opening parenthesis of a multi-line function
+     |         |     call must be the last content on the line
+  72 | ERROR   | [x] Closing parenthesis of a multi-line function
+     |         |     call must be on a line by itself
+  78 | ERROR   | [ ] Missing parameter comment
+  78 | ERROR   | [x] Expected 1 spaces after parameter type; 2 found
+  79 | ERROR   | [ ] Tag cannot be grouped with parameter tags in a
+     |         |     doc comment
+  89 | ERROR   | [ ] Missing parameter comment
+  89 | ERROR   | [x] Expected 1 spaces after parameter type; 2 found
+  90 | ERROR   | [ ] Tag cannot be grouped with parameter tags in a
+     |         |     doc comment
+ 100 | ERROR   | [ ] Missing parameter comment
+ 100 | ERROR   | [x] Expected 1 spaces after parameter type; 2 found
+ 101 | ERROR   | [ ] Missing parameter comment
+ 101 | ERROR   | [x] Expected 22 spaces after parameter type; 2 found
+ 102 | ERROR   | [ ] Tag cannot be grouped with parameter tags in a
+     |         |     doc comment
+ 112 | ERROR   | [ ] Missing parameter comment
+ 112 | ERROR   | [x] Expected 1 spaces after parameter type; 2 found
+ 113 | ERROR   | [ ] Tag cannot be grouped with parameter tags in a
+     |         |     doc comment
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 15 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: .../project/TAYL-back/app/Http/Controllers/GetJsonLogController.php
+----------------------------------------------------------------------
+FOUND 24 ERRORS AFFECTING 18 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  9 | ERROR | [ ] Missing class doc comment
+ 16 | ERROR | [ ] Missing parameter comment
+ 16 | ERROR | [x] Expected 1 spaces after parameter type; 2 found
+ 17 | ERROR | [ ] Tag cannot be grouped with parameter tags in a doc
+    |       |     comment
+ 18 | ERROR | [ ] There must be no blank lines after the function
+    |       |     comment
+ 22 | ERROR | [x] Opening brace should be on the line after the
+    |       |     declaration; found 1 blank line(s)
+ 28 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 30 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+ 32 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 62 | ERROR | [ ] Missing parameter comment
+ 62 | ERROR | [x] Expected 1 spaces after parameter type; 2 found
+ 63 | ERROR | [ ] Tag cannot be grouped with parameter tags in a doc
+    |       |     comment
+ 73 | ERROR | [ ] Missing parameter comment
+ 73 | ERROR | [x] Expected 1 spaces after parameter type; 2 found
+ 74 | ERROR | [ ] Tag cannot be grouped with parameter tags in a doc
+    |       |     comment
+ 84 | ERROR | [ ] Missing parameter comment
+ 84 | ERROR | [x] Expected 1 spaces after parameter type; 2 found
+ 85 | ERROR | [ ] Missing parameter comment
+ 85 | ERROR | [x] Expected 22 spaces after parameter type; 2 found
+ 86 | ERROR | [ ] Tag cannot be grouped with parameter tags in a doc
+    |       |     comment
+ 96 | ERROR | [ ] Missing parameter comment
+ 96 | ERROR | [x] Expected 1 spaces after parameter type; 2 found
+ 97 | ERROR | [ ] Tag cannot be grouped with parameter tags in a doc
+    |       |     comment
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 10 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...roject/TAYL-back/app/Http/Controllers/ParallelLintController.php
+----------------------------------------------------------------------
+FOUND 18 ERRORS AND 5 WARNINGS AFFECTING 15 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | [ ] Missing file doc comment
+ 10 | ERROR   | [ ] Missing class doc comment
+ 12 | ERROR   | [ ] Missing function doc comment
+ 12 | ERROR   | [x] Opening brace should be on a new line
+ 21 | WARNING | [ ] Line exceeds 85 characters; contains 89
+    |         |     characters
+ 22 | ERROR   | [x] Space after opening parenthesis of function call
+    |         |     prohibited
+ 22 | WARNING | [ ] Line exceeds 85 characters; contains 104
+    |         |     characters
+ 23 | ERROR   | [x] Space after opening parenthesis of function call
+    |         |     prohibited
+ 23 | WARNING | [ ] Line exceeds 85 characters; contains 112
+    |         |     characters
+ 27 | WARNING | [ ] Line exceeds 85 characters; contains 91
+    |         |     characters
+ 31 | ERROR   | [ ] Expected "if (...) {\n"; found "if(...){\n"
+ 31 | ERROR   | [x] There must be a single space between the closing
+    |         |     parenthesis and the opening brace of a multi-line
+    |         |     IF statement; found 0 spaces
+ 34 | ERROR   | [ ] Expected "} else {\n"; found "}else{\n"
+ 41 | ERROR   | [x] No space found after comma in function call
+ 41 | ERROR   | [x] No space found after comma in function call
+ 43 | ERROR   | [ ] Expected "if (...) {\n"; found "if(...){\n"
+ 43 | ERROR   | [x] There must be a single space between the closing
+    |         |     parenthesis and the opening brace of a multi-line
+    |         |     IF statement; found 0 spaces
+ 45 | ERROR   | [ ] Expected "} else {\n"; found "}else{\n"
+ 53 | ERROR   | [ ] Missing function doc comment
+ 53 | ERROR   | [x] Opening brace should be on a new line
+ 61 | ERROR   | [ ] You must use "/**" style comments for a function
+    |         |     comment
+ 61 | ERROR   | [x] Opening brace should be on a new line
+ 62 | WARNING | [ ] Line exceeds 85 characters; contains 120
+    |         |     characters
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 9 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...-back/app/Http/Controllers/Queues/StartTestProcessController.php
+----------------------------------------------------------------------
+FOUND 33 ERRORS AFFECTING 32 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+ 23 | ERROR | [ ] Missing class doc comment
+ 25 | ERROR | [ ] Missing function doc comment
+ 29 | ERROR | [ ] Missing short description in doc comment
+ 30 | ERROR | [ ] Missing parameter comment
+ 42 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 46 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+ 47 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 48 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 49 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 50 | ERROR | [x] No space found after comma in function call
+ 51 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+ 51 | ERROR | [x] No space found after comma in function call
+ 53 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 56 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 57 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 58 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 59 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 60 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 61 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 62 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 63 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 64 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 65 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 66 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 67 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 68 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 69 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 70 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 71 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 72 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 0
+ 77 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 79 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 28 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...oject/TAYL-back/app/Http/Controllers/DonationEtherController.php
+----------------------------------------------------------------------
+FOUND 25 ERRORS AND 1 WARNING AFFECTING 18 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | [ ] Missing file doc comment
+  7 | ERROR   | [ ] Missing class doc comment
+ 11 | ERROR   | [ ] Private member variable "addressEther" must be
+    |         |     prefixed with an underscore
+ 12 | ERROR   | [ ] Private member variable "urlQrCode" must be
+    |         |     prefixed with an underscore
+ 12 | WARNING | [ ] Line exceeds 85 characters; contains 139
+    |         |     characters
+ 15 | ERROR   | [ ] Missing function doc comment
+ 15 | ERROR   | [x] Opening brace should be on a new line
+ 17 | ERROR   | [x] Opening parenthesis of a multi-line function call
+    |         |     must be the last content on the line
+ 20 | ERROR   | [x] Closing parenthesis of a multi-line function call
+    |         |     must be on a line by itself
+ 47 | ERROR   | [ ] Missing parameter comment
+ 47 | ERROR   | [x] Expected 1 spaces after parameter type; 2 found
+ 48 | ERROR   | [ ] Tag cannot be grouped with parameter tags in a
+    |         |     doc comment
+ 58 | ERROR   | [ ] Missing parameter comment
+ 58 | ERROR   | [x] Expected 1 spaces after parameter type; 2 found
+ 59 | ERROR   | [ ] Tag cannot be grouped with parameter tags in a
+    |         |     doc comment
+ 69 | ERROR   | [ ] Missing parameter comment
+ 69 | ERROR   | [x] Expected 1 spaces after parameter type; 2 found
+ 70 | ERROR   | [ ] Tag cannot be grouped with parameter tags in a
+    |         |     doc comment
+ 80 | ERROR   | [ ] Missing parameter comment
+ 80 | ERROR   | [x] Expected 1 spaces after parameter type; 2 found
+ 81 | ERROR   | [ ] Missing parameter comment
+ 81 | ERROR   | [x] Expected 22 spaces after parameter type; 2 found
+ 82 | ERROR   | [ ] Tag cannot be grouped with parameter tags in a
+    |         |     doc comment
+ 92 | ERROR   | [ ] Missing parameter comment
+ 92 | ERROR   | [x] Expected 1 spaces after parameter type; 2 found
+ 93 | ERROR   | [ ] Tag cannot be grouped with parameter tags in a
+    |         |     doc comment
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 9 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: .../TAYL-b/storage/app/public/project/TAYL-back/app/Http/Kernel.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+ 7 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...au/TAYL-b/storage/app/public/project/TAYL-back/app/JobStatus.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+ 7 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...blic/project/TAYL-back/app/Notifications/TestedProcessEntity.php
+----------------------------------------------------------------------
+FOUND 20 ERRORS AFFECTING 16 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+ 12 | ERROR | [ ] Missing class doc comment
+ 21 | ERROR | [ ] Private member variable "entity" must be prefixed
+    |       |     with an underscore
+ 26 | ERROR | [ ] Missing parameter comment
+ 36 | ERROR | [ ] Missing parameter comment
+ 36 | ERROR | [x] Expected 1 spaces after parameter type; 2 found
+ 37 | ERROR | [ ] Tag cannot be grouped with parameter tags in a doc
+    |       |     comment
+ 47 | ERROR | [ ] Missing parameter comment
+ 47 | ERROR | [x] Expected 1 spaces after parameter type; 2 found
+ 48 | ERROR | [ ] Tag cannot be grouped with parameter tags in a doc
+    |       |     comment
+ 55 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 56 | ERROR | [x] Multi-line function call not indented correctly;
+    |       |     expected 20 spaces but found 24
+ 56 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+ 65 | ERROR | [ ] Missing parameter comment
+ 65 | ERROR | [x] Expected 1 spaces after parameter type; 2 found
+ 66 | ERROR | [ ] Tag cannot be grouped with parameter tags in a doc
+    |       |     comment
+ 75 | ERROR | [ ] Missing short description in doc comment
+ 83 | ERROR | [ ] Missing short description in doc comment
+ 84 | ERROR | [ ] Missing parameter comment
+ 85 | ERROR | [ ] Missing @return tag in function comment
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 6 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...au/TAYL-b/storage/app/public/project/TAYL-back/app/JobEntity.php
+----------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+----------------------------------------------------------------------
+  2 | ERROR | Missing file doc comment
+  7 | ERROR | Missing class doc comment
+ 23 | ERROR | Missing @return tag in function comment
+----------------------------------------------------------------------
+
+
+FILE: .../storage/app/public/project/TAYL-back/app/Exceptions/Handler.php
+----------------------------------------------------------------------
+FOUND 10 ERRORS AFFECTING 7 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  8 | ERROR | [ ] Missing class doc comment
+ 34 | ERROR | [ ] Missing parameter comment
+ 34 | ERROR | [x] Expected 1 spaces after parameter type; 2 found
+ 35 | ERROR | [ ] Tag cannot be grouped with parameter tags in a doc
+    |       |     comment
+ 45 | ERROR | [ ] Missing parameter comment
+ 45 | ERROR | [x] Expected 1 spaces after parameter type; 2 found
+ 46 | ERROR | [ ] Missing parameter comment
+ 46 | ERROR | [x] Expected 15 spaces after parameter type; 2 found
+ 47 | ERROR | [ ] Tag cannot be grouped with parameter tags in a doc
+    |       |     comment
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 3 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...pp/public/project/TAYL-back/app/Providers/AppServiceProvider.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+ 8 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: .../public/project/TAYL-back/app/Providers/EventServiceProvider.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+ 8 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...p/public/project/TAYL-back/app/Providers/AuthServiceProvider.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+ 8 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: .../public/project/TAYL-back/app/Providers/RouteServiceProvider.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+ 8 | ERROR | Missing class doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...lic/project/TAYL-back/app/Providers/BroadcastServiceProvider.php
+----------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  8 | ERROR | [ ] Missing class doc comment
+ 19 | ERROR | [x] File is being conditionally included; use "include"
+    |       |     instead
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...au/TAYL-b/storage/app/public/project/TAYL-back/bootstrap/app.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 2 | ERROR | You must use "/**" style comments for a file comment
+----------------------------------------------------------------------
+
+
+FILE: ...nt/Bureau/TAYL-b/storage/app/public/project/TAYL-back/server.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AND 1 WARNING AFFECTING 3 LINES
+----------------------------------------------------------------------
+ 6 | ERROR   | [x] Tag value indented incorrectly; expected 1 spaces
+   |         |     but found 2
+ 7 | ERROR   | [x] Tag value indented incorrectly; expected 2 spaces
+   |         |     but found 3
+ 8 | WARNING | [ ] PHP version not specified
+ 8 | ERROR   | [ ] Missing @category tag in file comment
+ 8 | ERROR   | [ ] Missing @license tag in file comment
+ 8 | ERROR   | [ ] Missing @link tag in file comment
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...reau/TAYL-b/storage/app/public/project/TAYL-back/config/auth.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...reau/TAYL-b/storage/app/public/project/TAYL-back/config/view.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+----------------------------------------------------------------------
+
+
+FILE: .../TAYL-b/storage/app/public/project/TAYL-back/config/database.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...u/TAYL-b/storage/app/public/project/TAYL-back/config/session.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+----------------------------------------------------------------------
+
+
+FILE: .../TAYL-b/storage/app/public/project/TAYL-back/config/services.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...YL-b/storage/app/public/project/TAYL-back/config/filesystems.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...eau/TAYL-b/storage/app/public/project/TAYL-back/config/queue.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...u/TAYL-b/storage/app/public/project/TAYL-back/config/horizon.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...ureau/TAYL-b/storage/app/public/project/TAYL-back/config/app.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...eau/TAYL-b/storage/app/public/project/TAYL-back/config/cache.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...L-b/storage/app/public/project/TAYL-back/config/broadcasting.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...reau/TAYL-b/storage/app/public/project/TAYL-back/config/mail.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+----------------------------------------------------------------------
+
+
+FILE: .../storage/app/public/project/TAYL-back/resources/assets/js/app.js
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 20 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 22 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...ge/app/public/project/TAYL-back/resources/lang/en/validation.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AND 9 WARNINGS AFFECTING 10 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | Missing file doc comment
+ 19 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 21 | WARNING | Line exceeds 85 characters; contains 94 characters
+ 25 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 72 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 73 | WARNING | Line exceeds 85 characters; contains 94 characters
+ 74 | WARNING | Line exceeds 85 characters; contains 90 characters
+ 75 | WARNING | Line exceeds 85 characters; contains 90 characters
+ 76 | WARNING | Line exceeds 85 characters; contains 94 characters
+ 77 | WARNING | Line exceeds 85 characters; contains 99 characters
+----------------------------------------------------------------------
+
+
+FILE: ...age/app/public/project/TAYL-back/resources/lang/en/passwords.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AND 1 WARNING AFFECTING 2 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | Missing file doc comment
+ 16 | WARNING | Line exceeds 85 characters; contains 90 characters
+----------------------------------------------------------------------
+
+
+FILE: ...ge/app/public/project/TAYL-back/resources/lang/en/pagination.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+----------------------------------------------------------------------
+
+
+FILE: .../storage/app/public/project/TAYL-back/resources/lang/en/auth.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+----------------------------------------------------------------------
+
+
+FILE: ...ject/TAYL-back/resources/views/donation/donationPayPal.blade.php
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags
+   |         | are not allowed by this install of PHP. This file may
+   |         | be using short open tags but PHP does not allow them.
+----------------------------------------------------------------------
+
+
+FILE: ...ect/TAYL-back/resources/views/donation/donationBitCoin.blade.php
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags
+   |         | are not allowed by this install of PHP. This file may
+   |         | be using short open tags but PHP does not allow them.
+----------------------------------------------------------------------
+
+
+FILE: .../public/project/TAYL-back/resources/views/emails/email.blade.php
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags
+   |         | are not allowed by this install of PHP. This file may
+   |         | be using short open tags but PHP does not allow them.
+----------------------------------------------------------------------
+
+
+FILE: ...e/app/public/project/TAYL-back/resources/views/welcome.blade.php
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags
+   |         | are not allowed by this install of PHP. This file may
+   |         | be using short open tags but PHP does not allow them.
+----------------------------------------------------------------------
+
+
+FILE: ...u/TAYL-b/storage/app/public/project/personalMVC/public/index.php
+----------------------------------------------------------------------
+FOUND 43 ERRORS AFFECTING 18 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  2 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+  2 | ERROR | [x] File is being unconditionally included; use
+    |       |     "require_once" instead
+  3 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+  4 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+  5 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+  6 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+  6 | ERROR | [x] Space after opening parenthesis of function call
+    |       |     prohibited
+  6 | ERROR | [x] Expected 0 spaces before closing bracket; 1 found
+  7 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+  7 | ERROR | [x] Space after opening parenthesis of function call
+    |       |     prohibited
+  7 | ERROR | [x] Expected 0 spaces before closing bracket; 1 found
+  7 | ERROR | [ ] Constants must be uppercase; expected 'VIEWS' but
+    |       |     found 'views'
+  7 | ERROR | [x] Space after opening parenthesis of function call
+    |       |     prohibited
+  8 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+  8 | ERROR | [x] Space after opening parenthesis of function call
+    |       |     prohibited
+  8 | ERROR | [x] Expected 0 spaces before closing bracket; 1 found
+  8 | ERROR | [ ] Constants must be uppercase; expected 'CONTROLLERS'
+    |       |     but found 'controllers'
+  8 | ERROR | [x] Space after opening parenthesis of function call
+    |       |     prohibited
+ 10 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 10 | ERROR | [x] File is being unconditionally included; use
+    |       |     "require_once" instead
+ 12 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 12 | ERROR | [x] Line indented incorrectly; expected 0 spaces, found
+    |       |     1
+ 12 | ERROR | [ ] Expected "if (...) {\n"; found "if(...)\n\t{\n"
+ 12 | ERROR | [x] There must be a single space between the closing
+    |       |     parenthesis and the opening brace of a multi-line
+    |       |     IF statement; found newline
+ 13 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 14 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 14 | ERROR | [x] Line indented incorrectly; expected at least 4
+    |       |     spaces, found 2
+ 14 | ERROR | [x] Spaces must be used for alignment; tabs are not
+    |       |     allowed
+ 15 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 15 | ERROR | [x] Line indented incorrectly; expected at least 4
+    |       |     spaces, found 2
+ 15 | ERROR | [x] Spaces must be used for alignment; tabs are not
+    |       |     allowed
+ 16 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 16 | ERROR | [x] Line indented incorrectly; expected at least 4
+    |       |     spaces, found 2
+ 17 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 17 | ERROR | [x] Line indented incorrectly; expected 0 spaces, found
+    |       |     1
+ 17 | ERROR | [ ] Expected "} else {\n"; found "}else\n\t{\n"
+ 18 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 19 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 19 | ERROR | [x] Line indented incorrectly; expected at least 4
+    |       |     spaces, found 2
+ 20 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 20 | ERROR | [x] Line indented incorrectly; expected 0 spaces, found
+    |       |     1
+ 25 | ERROR | [x] File is being unconditionally included; use
+    |       |     "require_once" instead
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 38 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...ublic/project/personalMVC/MVC/controllers/contact_controller.php
+----------------------------------------------------------------------
+FOUND 25 ERRORS AFFECTING 13 LINES
+----------------------------------------------------------------------
+  1 | ERROR | [ ] Missing file doc comment
+  2 | ERROR | [ ] Doc comment is empty
+  3 | ERROR | [x] Expected 1 space(s) before asterisk; 0 found
+  4 | ERROR | [x] Expected 1 space(s) before asterisk; 0 found
+  4 | ERROR | [ ] Missing @category tag in class comment
+  4 | ERROR | [ ] Missing @package tag in class comment
+  4 | ERROR | [ ] Missing @author tag in class comment
+  4 | ERROR | [ ] Missing @license tag in class comment
+  4 | ERROR | [ ] Missing @link tag in class comment
+  7 | ERROR | [ ] Class name must begin with a capital letter
+  7 | ERROR | [ ] Class name is not valid; consider
+    |       |     Contact_Controller instead
+  9 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 10 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 10 | ERROR | [x] Line indented incorrectly; expected 4 spaces, found
+    |       |     1
+ 10 | ERROR | [ ] Missing function doc comment
+ 11 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 11 | ERROR | [x] Line indented incorrectly; expected at least 4
+    |       |     spaces, found 1
+ 12 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 12 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 2
+ 13 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 13 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 2
+ 14 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 15 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 15 | ERROR | [x] Line indented incorrectly; expected 4 spaces, found
+    |       |     1
+ 20 | ERROR | [x] Line indented incorrectly; expected 4 spaces, found
+    |       |     1
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 15 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...ublic/project/personalMVC/MVC/controllers/default_controller.php
+----------------------------------------------------------------------
+FOUND 23 ERRORS AFFECTING 11 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  4 | ERROR | [ ] Missing class doc comment
+  4 | ERROR | [ ] Class name must begin with a capital letter
+  4 | ERROR | [ ] Class name is not valid; consider
+    |       |     Default_Controller instead
+  6 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+  6 | ERROR | [x] Line indented incorrectly; expected 4 spaces, found
+    |       |     1
+  6 | ERROR | [ ] Missing function doc comment
+  7 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+  7 | ERROR | [x] Line indented incorrectly; expected at least 4
+    |       |     spaces, found 1
+  8 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+  9 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+  9 | ERROR | [x] Line indented incorrectly; expected 4 spaces, found
+    |       |     1
+ 11 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 11 | ERROR | [x] Line indented incorrectly; expected 4 spaces, found
+    |       |     1
+ 11 | ERROR | [ ] Missing function doc comment
+ 12 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 12 | ERROR | [x] Line indented incorrectly; expected at least 4
+    |       |     spaces, found 1
+ 13 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 14 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 14 | ERROR | [x] Line indented incorrectly; expected at least 8
+    |       |     spaces, found 2
+ 15 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+    |       |     allowed
+ 15 | ERROR | [x] Line indented incorrectly; expected 4 spaces, found
+    |       |     1
+ 15 | ERROR | [x] Spaces must be used for alignment; tabs are not
+    |       |     allowed
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 17 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...torage/app/public/project/personalMVC/MVC/configs/autoloader.php
+----------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 3 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | [ ] Missing file doc comment
+ 3 | ERROR | [ ] Missing function doc comment
+ 5 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+   |       |     allowed
+ 5 | ERROR | [x] Line indented incorrectly; expected at least 4
+   |       |     spaces, found 1
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...-b/storage/app/public/project/personalMVC/MVC/configs/config.php
+----------------------------------------------------------------------
+FOUND 7 ERRORS AFFECTING 4 LINES
+----------------------------------------------------------------------
+ 2 | ERROR | [ ] Missing file doc comment
+ 2 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+   |       |     allowed
+ 2 | ERROR | [x] "require" is a statement not a function; no
+   |       |     parentheses are required
+ 4 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+   |       |     allowed
+ 5 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+   |       |     allowed
+ 5 | ERROR | [x] No space found after comma in function call
+ 6 | ERROR | [x] Spaces must be used to indent lines; tabs are not
+   |       |     allowed
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 6 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: .../TAYL-b/storage/app/public/project/personalMVC/MVC/views/404.php
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags
+   |         | are not allowed by this install of PHP. This file may
+   |         | be using short open tags but PHP does not allow them.
+----------------------------------------------------------------------
+
+
+FILE: ...YL-b/storage/app/public/project/personalMVC/MVC/views/footer.php
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags
+   |         | are not allowed by this install of PHP. This file may
+   |         | be using short open tags but PHP does not allow them.
+----------------------------------------------------------------------
+
+
+FILE: ...AYL-b/storage/app/public/project/personalMVC/MVC/views/index.php
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags
+   |         | are not allowed by this install of PHP. This file may
+   |         | be using short open tags but PHP does not allow them.
+----------------------------------------------------------------------
+
+
+FILE: ...TAYL-b/storage/app/public/project/personalMVC/MVC/views/head.php
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags
+   |         | are not allowed by this install of PHP. This file may
+   |         | be using short open tags but PHP does not allow them.
+----------------------------------------------------------------------
+
+
+FILE: ...L-b/storage/app/public/project/personalMVC/MVC/views/contact.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AND 2 WARNINGS AFFECTING 3 LINES
+----------------------------------------------------------------------
+ 3 | WARNING | [ ] Line exceeds 85 characters; contains 180
+   |         |     characters
+ 4 | WARNING | [ ] Line exceeds 85 characters; contains 912
+   |         |     characters
+ 7 | ERROR   | [ ] Missing file doc comment
+ 7 | ERROR   | [x] Spaces must be used to indent lines; tabs are not
+   |         |     allowed
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+Time: 253ms; Memory: 14.3Mb
+
