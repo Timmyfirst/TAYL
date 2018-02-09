@@ -14,12 +14,13 @@ use Illuminate\Support\Facades\DB;
 class CodeSnifferController extends Controller
 {
 
-    public function createCodeSnifferLog($urlGit,$jobsListId){
+    public function createCodeSnifferLog(){
 
 
 
 //        $projectName =  $this->getProjectName($urlGit);
         $projectName = 'TAYL-back';
+        $jobsListId = '18';
         /*get the date to put it at the end of the log file name*/
         $date =  date('Y_m_d_G-i-s');
         $nameLogFile= $projectName.'_logSniff'.$jobsListId;
