@@ -22,7 +22,8 @@ class GetJsonLogController extends Controller
     {
 
         $filename = $request->projetGit;
-        $path = storage_path() . "/app/public/logProject/" . $filename . '_FinalLog.json'; // ie: /var/www/laravel/app/storage/json/filename.json
+        $idJobList = $request->idJobList;
+        $path = storage_path() . "/app/public/logProject/" . $filename . '_FinalLog' . $idJobList . '.json'; // ie: /var/www/laravel/app/storage/json/filenameidjoblist.json
         $json = json_decode(file_get_contents($path), true);
         return response()->json([
             'json' => $json,

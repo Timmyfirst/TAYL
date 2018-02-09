@@ -37,6 +37,8 @@ class TestFinishedSendMail extends Mailable
     public function build()
     {
       return $this->view('emails.email')
-                  ->attach(public_path() . "/storage/logProject/".$this->FileName.".txt");
+                  ->attach(public_path() . "/storage/logProject/".$this->FileName.".txt")
+                    ->from('tayl.project@gmail.com', 'TAYL')
+          ->subject('Votre demande sur TAYL');
     }
 }
